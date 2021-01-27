@@ -6,18 +6,18 @@ ul,li{
     list-style:none;
 }
 .slide{
-    height:100%;
+    height:100vh;
     overflow:hidden;
     position:relative;
 }
 .slide ul{
-    width:calc(100% * 4);
+    width:calc(100% * 18);
     display:flex;
     transition:1s;
 }
 .slide li{
-    width:calc(100% / 4);
-    height: 800px;
+    width:calc(100% / 18);
+    height:100vh;
 }
 .slide li:nth-child(1){
     background:#ffa;
@@ -30,6 +30,48 @@ ul,li{
 }
 .slide li:nth-child(4){
     background:#aaf;
+}
+.slide li:nth-child(5){
+    background:#ffa;
+}
+.slide li:nth-child(6){
+    background:#faa;
+}
+.slide li:nth-child(7){
+    background:#afa;
+}
+.slide li:nth-child(8){
+    background:#aaf;
+}
+.slide li:nth-child(9){
+    background:#ffa;
+}
+.slide li:nth-child(10){
+    background:#faa;
+}
+.slide li:nth-child(11){
+    background:#afa;
+}
+.slide li:nth-child(12){
+    background:#aaf;
+}
+.slide li:nth-child(13){
+    background:#ffa;
+}
+.slide li:nth-child(14){
+    background:#faa;
+}
+.slide li:nth-child(15){
+    background:#afa;
+}
+.slide li:nth-child(16){
+    background:#aaf;
+}
+.slide li:nth-child(17){
+    background:#faa;
+}
+.slide li:nth-child(18){
+    background:#afa;
 }
 .slide input{
     display:none;
@@ -60,9 +102,38 @@ ul,li{
 #pos2:checked ~ ul{margin-left:-100%;}
 #pos3:checked ~ ul{margin-left:-200%;}
 #pos4:checked ~ ul{margin-left:-300%;}
+#pos5:checked ~ ul{margin-left:-400%;}
+#pos6:checked ~ ul{margin-left:-500%;}
+#pos7:checked ~ ul{margin-left:-600%;}
+#pos8:checked ~ ul{margin-left:-700%;}
+#pos9:checked ~ ul{margin-left:-800%;}
+#pos10:checked ~ ul{margin-left:-900%;}
+#pos11:checked ~ ul{margin-left:-1000%;}
+#pos12:checked ~ ul{margin-left:-1100%;}
+#pos13:checked ~ ul{margin-left:-1200%;}
+#pos14:checked ~ ul{margin-left:-1300%;}
+#pos15:checked ~ ul{margin-left:-1400%;}
+#pos16:checked ~ ul{margin-left:-1500%;}
+#pos17:checked ~ ul{margin-left:-1600%;}
+#pos18:checked ~ ul{margin-left:-1700%;}
+#pos19:checked ~ ul{margin-left:-1800%;}
 
 /* bullet 조작 */
 #pos1:checked ~ .bullet label:nth-child(1),
 #pos2:checked ~ .bullet label:nth-child(2),
 #pos3:checked ~ .bullet label:nth-child(3),
-#pos4:checked ~ .bullet label:nth-child(4){background:#666;}
+#pos4:checked ~ .bullet label:nth-child(4),
+#pos5:checked ~ .bullet label:nth-child(5),
+#pos6:checked ~ .bullet label:nth-child(6),
+#pos7:checked ~ .bullet label:nth-child(7),
+#pos8:checked ~ .bullet label:nth-child(8),
+#pos9:checked ~ .bullet label:nth-child(9),
+#pos10:checked ~ .bullet label:nth-child(10),
+#pos11:checked ~ .bullet label:nth-child(11),
+#pos12:checked ~ .bullet label:nth-child(12),
+#pos13:checked ~ .bullet label:nth-child(13),
+#pos14:checked ~ .bullet label:nth-child(14),
+#pos15:checked ~ .bullet label:nth-child(15),
+#pos16:checked ~ .bullet label:nth-child(16),
+#pos17:checked ~ .bullet label:nth-child(17),
+#pos18:checked ~ .bullet label:nth-child(18){background:#666;}
