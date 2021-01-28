@@ -6,6 +6,10 @@
   font-family: "GmarketSansBold";
   src:url("./font/GmarketSansTTFBold.woff") format("woff")
 }
+@font-face{
+  font-family: "GmarketSans";
+  src:url("./font/GmarketSansTTFLight.woff") format("woff")
+}
 body
 {
     width: 100%;
