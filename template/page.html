@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>셀러비전</title>
   <link rel="stylesheet" href="pagestyle.css" type="text/css">
+  <link rel="stylesheet/sass" type="text/css" href="pagestyles.sass" />
 </head>
 <body>
   <div class="slide">
@@ -167,7 +168,13 @@
         <div class="container">
           <div class="outer">
             <div class="inner">
-              <button type="button" id="button1" style="height: 10%; width :10%" onclick="location.href='report.html'" value="버튼1"></button>
+                <a href='report.html' class="cta">
+                  <span>Click me</span>
+                  <svg width="13px" height="10px" viewBox="0 0 13 10">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </a>
             </div>
         </div>
       </div>

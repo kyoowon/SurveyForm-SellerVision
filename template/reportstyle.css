@@ -5,6 +5,12 @@ body {
     background-color: #ffffff;
 }
 
+.header{
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+}
+
 .container{
         position: relative;
         width: 70%;
@@ -27,13 +33,19 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    background-color: #929796;
+    background-color: pink;
     border-radius: 5px;
 
 }
-
+.content {
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    background-color: white;
+}
 .grid-item:nth-child(odd) {
-    background-color: #424242;
+    background-color:gray;
 }
 
 .span-2 {
