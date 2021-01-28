@@ -32,11 +32,18 @@ ul,li{
     font-family: 'GmarketSansBold';
 }
 
+.slide .question {
+  font-size: 50px;
+}
+.slide .answer {
+  font-size: 30px;
+}
+
 .slide {
-    font-size: 14px;
+  
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
+    color: black;
     background-color: #929796;
     border-radius: 5px;
 
@@ -199,6 +206,8 @@ ul,li{
 .cta:active {
   transform: scale(0.96);
 }
+
+
 /* 슬라이드 조작 */
 #pos1:checked ~ ul{margin-left:0;}
 #pos2:checked ~ ul{margin-left:-100%;}
