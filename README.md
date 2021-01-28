@@ -1,2 +1,2 @@
 ## site link
->> https://kyoowon.github.io/SurveyForm/template/title.html
+>> https://kyoowon.github.io/SurveyForm-SellerVision/template/title.html
