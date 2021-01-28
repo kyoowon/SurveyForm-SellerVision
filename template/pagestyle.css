@@ -53,7 +53,7 @@ ul,li{
     background-color: white;
 }
 
-.slide input{
+.slide input {
     display:none;
 }
 
@@ -84,7 +84,6 @@ ul,li{
     height: 60%;
     margin: 10% auto;
     border-radius: 5px;
-    background: pink;
 }
 
 .outer {
