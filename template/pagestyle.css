@@ -32,7 +32,6 @@ ul,li{
 .slide li{
     width:calc(100% / 18);
     height:100vh;
-    text-align: center;
     font-family: 'GmarketSansBold';
 }
 
@@ -42,7 +41,7 @@ ul,li{
   padding-right: 10px;
 }
 .slide .answer {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .slide {
@@ -66,8 +65,8 @@ ul,li{
     bottom:20px;
     left:0;
     right:0;
-    text-align:
-    center;z-index:10;
+    text-align: center;
+    z-index:10;
 } 
 
 .slide .bullet label{
@@ -216,7 +215,6 @@ ul,li{
 .cta:active {
   transform: scale(0.96);
 }
-
 
 /* 슬라이드 조작 */
 #pos1:checked ~ ul{margin-left:0;}
