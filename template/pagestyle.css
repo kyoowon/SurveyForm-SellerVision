@@ -34,19 +34,19 @@ ul,li{
 
 .slide .question {
   font-size: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .slide .answer {
   font-size: 30px;
 }
 
 .slide {
-  
     font-weight: bold;
     text-transform: uppercase;
     color: black;
     background-color: #929796;
     border-radius: 5px;
-
 }
 
 .slide li:nth-child(odd) {
@@ -78,7 +78,7 @@ ul,li{
     cursor:pointer;
 }
 
-.slide .container {
+.container {
     position: relative;
     width: 70%;
     height: 60%;
@@ -87,13 +87,13 @@ ul,li{
     background: pink;
 }
 
-.slide .outer {
+.outer {
     display: table;
     width: 100%;
     height: 100%;
 }
 
-.slide .inner {
+.inner {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -102,17 +102,18 @@ ul,li{
 .inner a {
     text-decoration: none;
     color: inherit;
-  }
+}
   
-  .cta {
+.cta {
     position: relative;
     margin: auto;
     padding: 19px 22px;
     transition: all 0.2s ease;
         vertical-align: middle;
     text-align: center;
-  }
-  .cta:before {
+}
+
+.cta:before {
     content: "";
     position: absolute;
     top: 0;
@@ -123,8 +124,9 @@ ul,li{
     width: 56px;
     height: 56px;
     transition: all 0.3s ease;
-  }
-  .cta span {
+}
+
+.cta span {
     position: relative;
     font-size: 16px;
     line-height: 18px;
@@ -132,8 +134,9 @@ ul,li{
     letter-spacing: 0.25em;
     text-transform: uppercase;
     vertical-align: middle;
-  }
-  .cta svg {
+}
+
+.cta svg {
     position: relative;
     top: 0;
     margin-left: 10px;
@@ -145,17 +148,18 @@ ul,li{
     transform: translateX(-5px);
     transition: all 0.3s ease;
   }
-  .cta:hover:before {
+
+.cta:hover:before {
     width: 100%;
     background: #ffab9d;
-  }
-  .cta:hover svg {
+}
+.cta:hover svg {
     transform: translateX(0);
-  }
-  .cta:active {
-    transform: scale(0.96);
 }
 
+.cta:active {
+    transform: scale(0.96);
+}
 
 .cta {
   position: relative;
@@ -163,6 +167,7 @@ ul,li{
   padding: 19px 22px;
   transition: all 0.2s ease;
 }
+
 .cta:before {
   content: "";
   position: absolute;
@@ -175,6 +180,7 @@ ul,li{
   height: 56px;
   transition: all 0.3s ease;
 }
+
 .cta span {
   position: relative;
   font-size: 16px;
