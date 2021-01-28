@@ -43,10 +43,14 @@ ul,li{
   font-family: 'GmarketSansBold';
 }
 .slide .answer {
+  display: inline;
   font-size: 30px;
   padding-left: 10px;
   padding-right: 10px;
   font-family: 'GmarketSans';
+}
+.answer label {
+  justify-content: space-between;
 }
 
 .slide li:nth-child(odd) {
@@ -252,3 +256,22 @@ ul,li{
 #pos16:checked ~ .bullet label:nth-child(16),
 #pos17:checked ~ .bullet label:nth-child(17),
 #pos18:checked ~ .bullet label:nth-child(18){background:#666;}
+
+/* answer 조작 */
+#pos1:checked ~ .answer label:nth-child(2),
+#pos2:checked ~ .answer label:nth-child(3),
+#pos3:checked ~ .answer label:nth-child(4),
+#pos4:checked ~ .answer label:nth-child(5),
+#pos5:checked ~ .answer label:nth-child(6),
+#pos6:checked ~ .answer label:nth-child(7),
+#pos7:checked ~ .answer label:nth-child(8),
+#pos8:checked ~ .answer label:nth-child(9),
+#pos9:checked ~ .answer label:nth-child(10),
+#pos10:checked ~ .answer label:nth-child(11),
+#pos11:checked ~ .answer label:nth-child(12),
+#pos12:checked ~ .answer label:nth-child(13),
+#pos13:checked ~ .answer label:nth-child(14),
+#pos14:checked ~ .answer label:nth-child(15),
+#pos15:checked ~ .answer label:nth-child(16),
+#pos16:checked ~ .answer label:nth-child(17),
+#pos17:checked ~ .answer label:nth-child(18){background:#666;}
