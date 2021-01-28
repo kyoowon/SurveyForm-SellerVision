@@ -2,6 +2,10 @@
     margin:0;
     padding:0;
 }
+@font-face{
+  font-family: "GmarketSansBold";
+  src:url("./font/GmarketSansTTFBold.woff") format("woff")
+}
 body
 {
     width: 100%;
@@ -24,6 +28,10 @@ ul,li{
 .slide li{
     width:calc(100% / 18);
     height:100vh;
+    text-align: center;
+    /* padding: 130px 0; */
+    font-size: 80px;
+    font-family: 'GmarketSansBold';
 }
 
 .slide {
