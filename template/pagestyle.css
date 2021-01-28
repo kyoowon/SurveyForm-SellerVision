@@ -33,16 +33,17 @@ ul,li{
     width:calc(100% / 18);
     height:100vh;
     text-align: center;
-    font-family: 'GmarketSansBold';
 }
 
 .slide .question {
   font-size: 50px;
   padding-left: 10px;
   padding-right: 10px;
+  font-family: 'GmarketSansBold';
 }
 .slide .answer {
   font-size: 30px;
+  font-family: 'GmarketSans';
 }
 
 .slide {
