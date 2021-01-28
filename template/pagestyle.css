@@ -6,6 +6,10 @@
   font-family: "GmarketSansBold";
   src:url("./font/GmarketSansTTFBold.woff") format("woff")
 }
+@font-face{
+  font-family: "GmarketSans";
+  src:url("./font/GmarketSansTTFLight.woff") format("woff")
+}
 body
 {
     width: 100%;
@@ -34,9 +38,11 @@ ul,li{
 
 .slide .question {
   font-size: 80px;
+  font-family: 'GmarketSansBold';
 }
 .slide .answer {
   font-size: 50px;
+  font-family: 'GmarketSans';
 }
 
 .slide {
