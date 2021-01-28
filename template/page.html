@@ -10,6 +10,7 @@
 
 <body>
   <div class="slide">
+    <div class="rad" style="display: none;">
     <input type="radio" name="pos" id="pos1" checked>
     <input type="radio" name="pos" id="pos2">
     <input type="radio" name="pos" id="pos3">
@@ -28,6 +29,7 @@
     <input type="radio" name="pos" id="pos16">
     <input type="radio" name="pos" id="pos17">
     <input type="radio" name="pos" id="pos18">
+    </div>
     <ul>
       <li>
         <div class="container">
@@ -38,8 +40,17 @@
                 <p>제조사</p>
                 <p>유통사</p>
                 <p>제조사+유통사</p>
-                <p>기타 :</p>
               </div>
+              <input class="c-checkbox" type="checkbox" id="checkbox">
+                <div class="c-formContainer">
+                  <form class="c-form" action="">
+                    <input class="c-form__input" type="text">
+                    <label class="c-form__buttonLabel" for="checkbox">
+                      <button class="c-form__button" type="button">Send</button>
+                    </label>
+                    <label class="c-form__toggle" for="checkbox" data-title="Notify me"></label>
+                  </form>
+                </div>
             </div>
           </div>
         </div>
