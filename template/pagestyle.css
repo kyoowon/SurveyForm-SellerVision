@@ -22,8 +22,8 @@ ul,li{
     overflow:hidden;
     position:relative;
     font-weight: bold;
-    color: black;
-    background-color: #929796;
+    color: #181f39;
+    background-color:#fafafa;
     border-radius: 5px;
 }
 .slide ul{
@@ -53,8 +53,9 @@ ul,li{
   justify-content: space-between;
 }
 
-.slide li:nth-child(odd) {
-    background-color: rgb(255, 221, 247);
+.slide li:nth-child(even) {
+    background-color: #181f39;
+    color: #fafafa;
 }
 
 .slide .bullet{
@@ -119,7 +120,7 @@ ul,li{
   left: 0;
   display: block;
   border-radius: 28px;
-  background: rgba(255, 171, 157, 0.5);
+  background: #e44178;;
   width: 56px;
   height: 56px;
   transition: all 0.3s ease;
@@ -149,7 +150,7 @@ ul,li{
 }
 .cta:hover:before {
   width: 100%;
-  background: #ffab9d;
+  background: #e44178;;
 }
 .cta:hover svg {
   transform: translateX(0);
@@ -211,7 +212,7 @@ ul,li{
   overflow: hidden;
   position: relative;
   z-index: 1;
-  color: #000;
+  
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -251,7 +252,7 @@ ul,li{
   font-size: 17px;
   letter-spacing: 4px;
   position: relative;
-  background-color: #ffab9d;
+  background-color: #e44178;;
   border: none;
   color: #fff;
   width: 100px;
