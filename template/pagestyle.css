@@ -54,7 +54,7 @@ ul,li{
 }
 
 .slide li:nth-child(odd) {
-    background-color: white;
+    background-color: rgb(255, 221, 247);
 }
 
 .slide .bullet{
@@ -103,62 +103,7 @@ ul,li{
     color: inherit;
 }
   
-.cta {
-    position: relative;
-    margin: auto;
-    padding: 19px 22px;
-    transition: all 0.2s ease;
-        vertical-align: middle;
-    text-align: center;
-}
 
-.cta:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    border-radius: 28px;
-    background: rgba(255, 171, 157, 0.5);
-    width: 56px;
-    height: 56px;
-    transition: all 0.3s ease;
-}
-
-.cta span {
-    position: relative;
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 900;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    vertical-align: middle;
-}
-
-.cta svg {
-    position: relative;
-    top: 0;
-    margin-left: 10px;
-    fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: #111;
-    stroke-width: 2;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-  }
-
-.cta:hover:before {
-    width: 100%;
-    background: #ffab9d;
-}
-.cta:hover svg {
-    transform: translateX(0);
-}
-
-.cta:active {
-    transform: scale(0.96);
-}
 
 .cta {
   position: relative;
@@ -188,6 +133,7 @@ ul,li{
   letter-spacing: 0.25em;
   text-transform: uppercase;
   vertical-align: middle;
+  color: #fff;
 }
 .cta svg {
   position: relative;
@@ -196,7 +142,7 @@ ul,li{
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke: #111;
+  stroke: rgb(255, 255, 255);
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
@@ -305,21 +251,21 @@ ul,li{
   font-size: 17px;
   letter-spacing: 4px;
   position: relative;
-  background-color: #16a085;
+  background-color: #ffab9d;
   border: none;
   color: #fff;
   width: 100px;
   height: 20px;
   transition-duration: 0.4s;
   overflow: hidden;
-  box-shadow: 0 5px 15px #193047;
-  border-radius: 4px;
+  box-shadow: 0 5px 15px #ff6b51;
+  border-radius: 10px;
   float: right;
 }
 
 .next:hover {
   background: #fff;
-  box-shadow: 0px 2px 10px 5px #1abc9c;
+  box-shadow: 0px 2px 10px 5px #ffc7bd;
   color: #000;
 }
 
