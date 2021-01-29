@@ -212,6 +212,10 @@ ul,li{
   transform: scale(0.96);
 }
 
+.answer input{
+  visibility: hidden;
+}
+
 .answer label {
   border:1px solid #ccc;
   padding:10px;
