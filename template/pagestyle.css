@@ -27,12 +27,12 @@ ul,li{
     border-radius: 5px;
 }
 .slide ul{
-    width:calc(100% * 18);
+    width:calc(1800vw * 18);
     display:flex;
     transition:1s;
 }
 .slide li{
-    width:calc(100% / 18);
+    width:calc(1800vw / 18);
     height:100vh;
 }
 
@@ -55,10 +55,6 @@ ul,li{
 
 .slide li:nth-child(odd) {
     background-color: white;
-}
-
-.slide input {
-    display:none;
 }
 
 .slide .bullet{
@@ -216,6 +212,19 @@ ul,li{
   transform: scale(0.96);
 }
 
+.answer label {
+  border:1px solid #ccc;
+  padding:10px;
+  margin:0 0 10px;
+  display:block; 
+ }
+ 
+.answer label:hover {
+  background:#eee;
+  cursor:pointer;
+ }
+
+
 /* 슬라이드 조작 */
 #pos1:checked ~ ul{margin-left:0;}
 #pos2:checked ~ ul{margin-left:-100%;}
@@ -256,22 +265,3 @@ ul,li{
 #pos16:checked ~ .bullet label:nth-child(16),
 #pos17:checked ~ .bullet label:nth-child(17),
 #pos18:checked ~ .bullet label:nth-child(18){background:#666;}
-
-/* answer 조작 */
-#pos1:checked ~ .answer label:nth-child(2),
-#pos2:checked ~ .answer label:nth-child(3),
-#pos3:checked ~ .answer label:nth-child(4),
-#pos4:checked ~ .answer label:nth-child(5),
-#pos5:checked ~ .answer label:nth-child(6),
-#pos6:checked ~ .answer label:nth-child(7),
-#pos7:checked ~ .answer label:nth-child(8),
-#pos8:checked ~ .answer label:nth-child(9),
-#pos9:checked ~ .answer label:nth-child(10),
-#pos10:checked ~ .answer label:nth-child(11),
-#pos11:checked ~ .answer label:nth-child(12),
-#pos12:checked ~ .answer label:nth-child(13),
-#pos13:checked ~ .answer label:nth-child(14),
-#pos14:checked ~ .answer label:nth-child(15),
-#pos15:checked ~ .answer label:nth-child(16),
-#pos16:checked ~ .answer label:nth-child(17),
-#pos17:checked ~ .answer label:nth-child(18){background:#666;}

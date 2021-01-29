@@ -6,28 +6,29 @@
   <title>셀러비전</title>
   <link rel="stylesheet" href="pagestyle.css" type="text/css">
   <link rel="stylesheet/sass" type="text/css" href="pagestyles.sass" />
+  <script src="page.js"></script>
 </head>
 
 <body>
   <div class="slide">
-    <input type="radio" name="pos" id="pos1" checked>
-    <input type="radio" name="pos" id="pos2">
-    <input type="radio" name="pos" id="pos3">
-    <input type="radio" name="pos" id="pos4">
-    <input type="radio" name="pos" id="pos5">
-    <input type="radio" name="pos" id="pos6">
-    <input type="radio" name="pos" id="pos7">
-    <input type="radio" name="pos" id="pos8">
-    <input type="radio" name="pos" id="pos9">
-    <input type="radio" name="pos" id="pos10">
-    <input type="radio" name="pos" id="pos11">
-    <input type="radio" name="pos" id="pos12">
-    <input type="radio" name="pos" id="pos13">
-    <input type="radio" name="pos" id="pos14">
-    <input type="radio" name="pos" id="pos15">
-    <input type="radio" name="pos" id="pos16">
-    <input type="radio" name="pos" id="pos17">
-    <input type="radio" name="pos" id="pos18">
+    <input type="radio" name="pos" id="pos1" style="display: none;" checked>
+    <input type="radio" name="pos" id="pos2" style="display: none;">
+    <input type="radio" name="pos" id="pos3" style="display: none;">
+    <input type="radio" name="pos" id="pos4" style="display: none;">
+    <input type="radio" name="pos" id="pos5" style="display: none;">
+    <input type="radio" name="pos" id="pos6" style="display: none;">
+    <input type="radio" name="pos" id="pos7" style="display: none;">
+    <input type="radio" name="pos" id="pos8" style="display: none;">
+    <input type="radio" name="pos" id="pos9" style="display: none;">
+    <input type="radio" name="pos" id="pos10" style="display: none;">
+    <input type="radio" name="pos" id="pos11" style="display: none;">
+    <input type="radio" name="pos" id="pos12" style="display: none;">
+    <input type="radio" name="pos" id="pos13" style="display: none;">
+    <input type="radio" name="pos" id="pos14" style="display: none;">
+    <input type="radio" name="pos" id="pos15" style="display: none;">
+    <input type="radio" name="pos" id="pos16" style="display: none;">
+    <input type="radio" name="pos" id="pos17" style="display: none;">
+    <input type="radio" name="pos" id="pos18" style="display: none;">
     <ul>
       <li>
         <div class="container">
@@ -35,11 +36,9 @@
             <div class="inner">
               <div class="question">기업 정보에 관한 질문입니다.</div>
               <div class="answer">
-                <label for="pos2">
-                  <a href="#">제조사</a>
-                  <a href="#">유통사</a>
-                  <a href="#">제조사+유통사</a>
-                </label>
+                <label><input type="checkbox" name="q1" value="제조사" onclick="checkOnlyOne(this)" />제조사</label>
+                <label><input type="checkbox" name="q1" value="제조사" onclick="checkOnlyOne(this)">유통사</label>
+                <label><input type="checkbox" name="q1" value="제조사" onclick="checkOnlyOne(this)">제조사+유통사</label>
                 <p>기타</p>
               </div>
             </div>
