@@ -4,7 +4,7 @@
   padding: 0;
 }
 body {
-  height: 100vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,12 +18,12 @@ body {
   display: inline-block;
 }
 .left {
-  color:pink;
-  transform: skew(0deg, -15deg);
+  color:#e44178;
+  transform: skew(0deg, 15deg);
 }
 .right {
-  color: black;
-  transform: skew(0deg, 15deg);
+  color:  #181f39;
+  transform: skew(0deg, -15deg);
 }
 .left .content {
   width: 100vw;
