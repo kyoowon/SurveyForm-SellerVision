@@ -28,10 +28,12 @@ body {
 .left .content {
   width: 100vw;
   text-align: center;
+  text-shadow: 3px 3px 3px gray;
 }
 .right .content {
   width: 100vw;
   text-align: center;
+  text-shadow: 3px 3px 3px gray;
   transform: translate(-50vw);
 }
 span {
