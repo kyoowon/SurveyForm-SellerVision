@@ -1,7 +1,4 @@
-*{
-    margin:0;
-    padding:0;
-}
+
 @font-face{
   font-family: "GmarketSansBold";
   src:url("./font/GmarketSansTTFBold.woff") format("woff")
@@ -10,11 +7,18 @@
   font-family: "GmarketSans";
   src:url("./font/GmarketSansTTFLight.woff") format("woff")
 }
+
+*{
+  margin:0;
+  padding:0;
+}
+
 body
 {
     width: 100%;
     height: 100%;
 }
+
 ul,li{
     list-style:none;
 }
@@ -24,7 +28,6 @@ ul,li{
     font-weight: bold;
     color: #181f39;
     background-color:#fafafa;
-    border-radius: 5px;
 }
 .slide ul{
     width:calc(1800vw * 18);
@@ -34,23 +37,6 @@ ul,li{
 .slide li{
     width:calc(1800vw / 18);
     height:100vh;
-}
-
-.slide .question {
-  font-size: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: 'GmarketSansBold';
-}
-.slide .answer {
-  display: inline;
-  font-size: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: 'GmarketSans';
-}
-.answer label {
-  justify-content: space-between;
 }
 
 .slide li:nth-child(even) {
@@ -99,12 +85,32 @@ ul,li{
     text-align: center;
 }
 
+.question {
+  font-size: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'GmarketSansBold';
+}
+
+.answer {
+  display: inline;
+  font-size: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'GmarketSans';
+}
+
+.answer label {
+  justify-content: space-between;
+}
+
 .inner a {
     text-decoration: none;
     color: inherit;
 }
   
 
+/* report button */
 
 .cta {
   position: relative;
@@ -159,53 +165,9 @@ ul,li{
   transform: scale(0.96);
 }
 
-#btn--yp {
-  box-sizing: content-box;
-  position: fixed;
-  z-index: 9;
-  bottom: 1em;
-  right: 1em;
-  border: solid 1em transparent;
-  width: 4.625em;
-  height: 3.25em;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/icon-yp.svg) 50%/cover content-box;
-  font: 16px/ 1.25 trebuchet ms, sans-serif;
-  text-indent: 200vw;
-  text-shadow: none;
-  filter: grayscale(1) drop-shadow(0 0 1px #e8e0e0);
-  transition: .5s;
-  white-space: nowrap;
-}
-#btn--yp:before {
-  box-sizing: inherit;
-  position: absolute;
-  left: 0;
-  bottom: 100%;
-  margin: 1em -.5em;
-  padding: .5em;
-  width: 100%;
-  border-radius: 5px;
-  background: #e8e0e0;
-  color: #000;
-  text-align: center;
-  text-decoration: none;
-  text-indent: 0vw;
-  white-space: normal;
-  animation: float 1s ease-in-out infinite alternate;
-  content: attr(data-txt);
-}
-#btn--yp:hover, #btn--yp:focus {
-  outline: none;
-  filter: grayscale(0) drop-shadow(0 0 1px crimson);
-}
+/* select button */
 
-/* @keyframes float {
-  to {
-    transform: translateY(0.75em);
-  }
-} */
-
-.answer .a {
+.answer .select {
   display: block;
   --p: 0;
   --q: calc(1 - var(--p));
@@ -220,7 +182,7 @@ ul,li{
   margin-right: 20%;
   padding: 5px;
 }
-.answer .a:before, .a:after {
+.answer .select:before, .select:after {
   --i: var(--p);
   --j: calc(1 - var(--i));
   position: absolute;
@@ -237,14 +199,14 @@ ul,li{
   transition: transform .5s ease-in-out;
   content: "";
 }
-.answer .a:after {
+.answer .select:after {
   --i: var(--q);
 }
-.answer .a:hover, .a:focus {
+.answer .select:hover {
   --p: 1;
 }
 
-
+/* next button */
 
 .next {
   text-align: center;
