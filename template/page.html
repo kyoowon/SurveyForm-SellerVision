@@ -35,10 +35,14 @@
             <div class="inner">
               <div class="question">기업 정보에 관한 질문입니다.</div>
               <div class="answer">
-                <a class="select q1" id="a1" href='javascript:void(0);' value ='no' onclick="click_select(id);">제조사</a>
-                <a class="select q1" id="a2" href='javascript:void(0);' value ='no' onclick="click_select(id);">유통사</a>
-                <a class="select q1" id="a3" href='javascript:void(0);' value ='no' onclick="click_select(id);">제조사+유통사</a>
-                <a class="select q1" id="a4" href='javascript:void(0);' value ='no' onclick="click_select(id);">기타</a>
+                <a class="select q1" id="a1" href='javascript:void(0);' value='no'
+                  onclick="click_select('q1', id);">제조사</a>
+                <a class="select q1" id="a2" href='javascript:void(0);' value='no'
+                  onclick="click_select(id, 1, 2);">유통사</a>
+                <a class="select q1" id="a3" href='javascript:void(0);' value='no'
+                  onclick="click_select(id, 1, 3);">제조사+유통사</a>
+                <a class="select q1" id="a4" href='javascript:void(0);' value='no'
+                  onclick="click_select(id, 1, 4);">기타</a>
               </div>
             </div>
           </div>
@@ -324,22 +328,23 @@
   </div>
 </body>
 <script>
-  var answer = {
-    
-  }
-  function click_select(id)
-  {
+  total = []
+  select_list = {}
+  function click_select(q, idx, id) {
     var color = document.getElementById(id);
-    answer = id;
-    if (color.value === 'yes')
-    {
-    document.getElementById(id).style.backgroundColor= '#fafafa';
-    color.value ='no';
-    }  
-    else {
-    document.getElementById(id).style.backgroundColor= '#c1c1c1';
-    color.value = 'yes';
+    if (color.value === 'yes' && select_list === q) {
+      color.style.backgroundColor = '#fafafa';
+      color.value = 'no';
     }
+    else {
+      document.getElementById(id).style.backgroundColor = '#c1c1c1';
+      color.value = 'yes';
+      select_list = {q : id}
+    }
+
   }
+
+
 </script>
+
 </html>
