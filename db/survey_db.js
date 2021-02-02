@@ -1,4 +1,4 @@
-document.write("<script type='text/javascript' src='../template/page.js'><"+"/script>"); 
+//document.write("<script type='text/javascript' src='../template/page.js'><"+"/script>"); 
 
 var dbconfig = require('../db/config/database_survey.js');
 var mysql = require('mysql');
@@ -15,7 +15,6 @@ function database_insert(){
             console.log("Error connecting database...nn :" + err);
         }
     
-        //var sql = "SELECT _id, phone FROM test LIMIT 2";
     
         dbconn.query(sql, params, function(error, rows, fields){
             if(error) {
@@ -25,7 +24,7 @@ function database_insert(){
                 //console.log('fields',fields);
             }
         });
-        var sql2 = "SELECT * FROM test";
+        var sql2 = "SELECT * FROM servey_result";
     
         dbconn.query(sql2, function(error, rows, fields){
             if(error) {

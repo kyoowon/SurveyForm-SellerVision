@@ -222,8 +222,7 @@ ul,li{
 #pos13:checked ~ .bullet label:nth-child(13),
 #pos14:checked ~ .bullet label:nth-child(14),
 #pos15:checked ~ .bullet label:nth-child(15),
-#pos16:checked ~ .bullet label:nth-child(16),
-#pos17:checked ~ .bullet label:nth-child(17){background:#666;}
+#pos16:checked ~ .bullet label:nth-child(16){background:#666;}
 
 
 
@@ -331,7 +330,6 @@ input {
   color: #726659;
   
   border: solid 1px #b3aca7;
-  border-bottom: none;
   
   transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
