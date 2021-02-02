@@ -36,7 +36,7 @@ function click_select(q, id) {
 }
 
 function next_page() {
-  for (lst in total_list)
+  for (var lst in total_list)
   {
     if (lst[0] == select_list.q){
       lst = select_list;
@@ -46,4 +46,13 @@ function next_page() {
   if (select_list.id != null)
     total_list.push(select_list);
   select_list = {};
+}
+
+function submit_form(){
+  for(i in total_list)
+  {
+    frist = total_list[i].id.indexOf("a");
+    total_list[i].id = total_list[i].id.slice(frist + 1, total_list[i].length);
+  }
+  console.log(total_list);
 }
