@@ -1,3 +1,6 @@
+
+//document.write("<script type='text/javascript' src='../db/survey_db.js'><"+"/script>"); 
+
 var total_list = []
 var select_list = {}
 
@@ -10,6 +13,17 @@ function find_id(q)
   }
   return null;
 }
+
+
+function check_answer(){
+  if (total_list.length != 16){
+    window.alert("모든 문항을 선택해주십시오.");
+  }
+  else{
+    next_page(); 
+  }
+}
+
 
 function click_select(q, id) {
     var color = document.getElementById(id);
@@ -66,3 +80,4 @@ function submit_form(){
   }
   console.log(total_list);
 }
+
