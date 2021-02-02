@@ -1,3 +1,6 @@
+
+//document.write("<script type='text/javascript' src='../db/survey_db.js'><"+"/script>"); 
+
 var total_list = []
 var select_list = {}
 
@@ -10,9 +13,18 @@ function find_id(q)
   }
   return null;
 }
-function click_input(q, id) {
 
+
+function check_answer(){
+  if (total_list.length != 16){
+    window.alert("모든 문항을 선택해주십시오.");
+  }
+  else{
+    next_page(); 
+  }
 }
+
+
 function click_select(q, id) {
     var color = document.getElementById(id);
     if (color.value == 'yes')
@@ -38,9 +50,9 @@ function click_select(q, id) {
 }
 
 function next_page() {
-  for (lst in total_list)
+  for (var lst in total_list)
   {
-    if (lst[0] == select_list.q){``
+    if (lst[0] == select_list.q){
       lst = select_list;
       return ;
     }
@@ -49,3 +61,13 @@ function next_page() {
     total_list.push(select_list);
   select_list = {};
 }
+
+function submit_form(){
+  for(i in total_list)
+  {
+    frist = total_list[i].id.indexOf("a");
+    total_list[i].id =parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
+  }
+  console.log(total_list);
+}
+
