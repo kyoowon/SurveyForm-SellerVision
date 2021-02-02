@@ -3,10 +3,10 @@ var select_list = {}
 
 function find_id(q)
 {
-  for(lst in total_list)
+  for(i in total_list)
   {
-    if(lst[0] == q)
-      return (lst);
+    if(total_list[i].q == q)
+      return (total_list[i].id);
   }
   return null;
 }
@@ -22,12 +22,20 @@ function click_select(q, id) {
       color.value ='no';
     }  
     else {
+      var other_id = find_id(q);
       if (select_list.id != null)
       {
         if (q % 2 != 0)
           document.getElementById(select_list.id).style.backgroundColor = '#fafafa';
         else
           document.getElementById(select_list.id).style.backgroundColor = '#181f39';
+      }
+      if (other_id != null)
+      {
+        if (q % 2 != 0)
+          document.getElementById(other_id).style.backgroundColor = '#fafafa';
+        else
+          document.getElementById(other_id).style.backgroundColor = '#181f39';
       }
       color.style.backgroundColor= '#c1c1c1';
       color.value = 'yes';
@@ -36,10 +44,10 @@ function click_select(q, id) {
 }
 
 function next_page() {
-  for (var lst in total_list)
+  for (var i in total_list)
   {
-    if (lst[0] == select_list.q){
-      lst = select_list;
+    if (total_list[i].q == select_list.q){
+      total_list[i] = select_list;
       return ;
     }
   }
