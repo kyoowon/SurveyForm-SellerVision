@@ -13,14 +13,14 @@ function find_id(q)
 
 function click_select(q, id) {
     var color = document.getElementById(id);
-    var val = color.value;
-    if (val == 'yes')
+    var value = color.value;
+    if (value == 'yes')
     {
       if (q % 2 != 0)
         color.style.backgroundColor = '#fafafa';
       else
         color.style.backgroundColor = '#181f39';
-        val ='no';
+        value ='no';
     }  
     else {
       var other_id = find_id(q);
@@ -39,9 +39,9 @@ function click_select(q, id) {
           document.getElementById(other_id).style.backgroundColor = '#181f39';
       }
       color.style.backgroundColor= '#c1c1c1';
-      val = 'yes';
+      value = 'yes';
 
-      select_list = {q, id, val};
+      select_list = {q, id, value};
   }
 }
 
