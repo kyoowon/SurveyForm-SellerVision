@@ -52,7 +52,7 @@ function submit_form(){
   for(i in total_list)
   {
     frist = total_list[i].id.indexOf("a");
-    total_list[i].id = total_list[i].id.slice(frist + 1, total_list[i].length);
+    total_list[i].id =parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
   }
   console.log(total_list);
 }
