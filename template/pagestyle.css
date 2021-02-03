@@ -71,13 +71,25 @@ ul,li{
     margin: 10% auto;
     border-radius: 5px;
 }
+.num {
+  display: flex;
+  font-size: 150%;
+  place-content: center;
+}
+.num .Q_header_bold {
+  font-family: 'GmarketSansBold';
+}
+.num .Q_header {
+  font-family: 'GmarketSans';
+}
 
 .outer {
     display: table;
-    
+
     width: 100%;
     height: 100%;
 }
+
 
 .inner {
     display: table-cell;
