@@ -28,15 +28,23 @@ function mult_select(q, id) {
   var color = document.getElementById(id);
   if (color.getAttribute("value") != "no")
   {
-    if (q % 2 != 0)
-      color.style.backgroundColor = '#fafafa';
+    if (q % 2 != 1)
+    {
+      color.style.color = '#fafafa';
+      color.style.textDecoration = 'none';
+
+    }
     else
-      color.style.backgroundColor = '#181f39';
+    {
+      color.style.color = '#181f39';
+      color.style.textDecoration = 'none';
+    }
     document.getElementById(id).setAttribute("value","no");
     console.log('ok')
   }  
   else {
-    color.style.backgroundColor= '#c1c1c1';
+    color.style.color = '#e44178';
+    color.style.textDecoration = 'underline';
     color.setAttribute("value","yes");
   }
   var value = color.getAttribute("value");

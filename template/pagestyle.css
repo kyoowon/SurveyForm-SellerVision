@@ -80,12 +80,12 @@ ul,li{
 }
 
 .inner {
-    display: table-cell;
-    vertical-align: middle;
+    display: block;
     text-align: center;
 }
 
 .question {
+  display: block;
   font-size: 50px;
   padding-left: 10px;
   padding-right: 10px;
@@ -94,9 +94,11 @@ ul,li{
 
 .answer {
   display: inline;
+  vertical-align: middle;
+  text-align: center;
   font-size: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 7px;
+  padding-right: 7x;
   font-family: 'GmarketSans';
 }
 
@@ -114,8 +116,8 @@ ul,li{
   padding: 8px;
   padding-left: 5%;
   font-size: 30px;
-  margin-left: 17%;
-  margin-right: 17%;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: left;
 }
 
@@ -354,4 +356,16 @@ textarea:hover {
 
 #submit:hover {
   color: #e2dedb;
+}
+
+.Q_header_bold
+{
+  font-size: 60px;
+  display: inline;
+}
+
+.Q_header
+{
+  font-size: 30px;
+  display: inline;
 }
