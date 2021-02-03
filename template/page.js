@@ -1,8 +1,10 @@
 
 //document.write("<script type='text/javascript' src='../db/survey_db.js'><"+"/script>"); 
+//import database_insert from '../db/survey_db'
 
 var total_list = []
 var select_list = {}
+
 
 function find_id(q)
 {
@@ -12,16 +14,6 @@ function find_id(q)
       return (total_list[i].id);
   }
   return null;
-}
-
-
-function check_answer(){
-  if (total_list.length != 16){
-    window.alert("모든 문항을 선택해주십시오.");
-  }
-  else{
-    next_page(); 
-  }
 }
 
 
@@ -73,11 +65,21 @@ function next_page() {
 }
 
 function submit_form(){
+
   for(i in total_list)
   {
     frist = total_list[i].id.indexOf("a");
     total_list[i].id =parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
   }
   console.log(total_list);
+  if (total_list.length != 15){
+    window.alert("모든 문항을 선택해주십시오.");
+    
+  }
+  else{
+    database_insert(total_list);
+    location.href = "report.html";
+  }
+
 }
 
