@@ -2,7 +2,6 @@
 var total_list = []
 var select_list = {}
 
-
 function find_id(q)
 {
   for(i in total_list)
@@ -67,7 +66,7 @@ function click_select(q, id) {
         else
           document.getElementById(select_list.id).style.color = '#fafafa';
     }
-    else if (total_list[idx] != null)
+    if (total_list[idx] != null)
     {
         document.getElementById(total_list[idx].id).style.textDecoration = 'none';
         if (total_list[idx].q % 2 == 1)
@@ -96,7 +95,6 @@ function next_page() {
 }
 
 function submit_form(){
-
   for(i in total_list)
   {
     frist = total_list[i].id.indexOf("a");
