@@ -78,9 +78,9 @@ function click_select(q, id) {
     {
         document.getElementById(total_list[idx].id).style.textDecoration = 'none';
         if (total_list[idx].q % 2 == 1)
-          document.getElementById(total_list[idx].id).style.color = '#181f39';
+          document.getElementById(total_list[idx].id).style.color = '#979797';
         else
-          document.getElementById(total_list[idx].id).style.color = '#fafafa';
+          document.getElementById(total_list[idx].id).style.color = '#979797';
     }
     color.style.textDecoration = 'underline';
     color.style.color = '#e44178';
