@@ -32,7 +32,6 @@ ul,li{
 .slide ul{
     width:calc(1800vw * 18);
     display:flex;
-    transition:1s;
 }
 .slide li{
     width:calc(1800vw / 18);
