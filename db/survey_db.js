@@ -1,6 +1,8 @@
 //document.write("<script type='text/javascript' src='../template/page.js'><"+"/script>"); 
+// import {total_list} from '../template/page.js';
 
-var dbconfig = require('./config/database_survey.js');
+console.log(total_list);
+dbconfig = require('./config/database_survey');
 var mysql = require('mysql');
 var dbconn = mysql.createConnection(dbconfig); //< DB Connection~!!
 
