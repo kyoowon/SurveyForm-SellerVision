@@ -108,45 +108,14 @@ ul,li{
     color: inherit;
 }
 
-/* select button */
-
-.answer .select {
+.select {
   display: block;
-  --p: 0;
-  --q: calc(1 - var(--p));
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding: 5px;
-}
-.answer .select:before, .select:after {
-  --i: var(--p);
-  --j: calc(1 - var(--i));
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: calc(var(--j)*(100% - 12.36932em));
-  width: 12.36932em;
-  transform-origin: calc(var(--j)*100%) calc(var(--i)*100%);
-  transform: rotate(-14.03624deg) translate(calc(var(--q)*(1 - 2*var(--i))*-100%));
-  box-shadow: 0 0 0 1px currentcolor;
-  background: currentcolor;
-  color: #ef4654;
-  transition: transform .5s ease-in-out;
-  content: "";
-}
-.answer .select:after {
-  --i: var(--q);
-}
-.answer .select:hover {
-  --p: 1;
+  padding: 8px;
+  padding-left: 5%;
+  font-size: 30px;
+  margin-left: 17%;
+  margin-right: 17%;
+  text-align: left;
 }
 
 /* next button */

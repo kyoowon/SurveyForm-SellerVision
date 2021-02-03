@@ -7,7 +7,7 @@ function find_id(q)
   for(i in total_list)
   {
     if(total_list[i].q == q)
-      return (total_list[i].id);
+      return (i);
   }
   return null;
 }
@@ -57,22 +57,25 @@ function mult_select(q, id) {
 function click_select(q, id) {
     var color = document.getElementById(id);
     var value = color.value;
-    var other_id = find_id(q);
+    var idx = find_id(q);
     if (select_list.id != null)
     {
-      if (q % 2 != 0)
-        document.getElementById(select_list.id).style.backgroundColor = '#fafafa';
-      else
-        document.getElementById(select_list.id).style.backgroundColor = '#181f39';
+        document.getElementById(select_list.id).style.textDecoration = 'none';
+        if (q % 2 == 1)
+          document.getElementById(select_list.id).style.color = '#181f39';
+        else
+          document.getElementById(select_list.id).style.color = '#fafafa';
     }
-    if (other_id != null)
+    else if (total_list[idx] != null)
     {
-      if (q % 2 != 0)
-        document.getElementById(other_id).style.backgroundColor = '#fafafa';
-      else
-        document.getElementById(other_id).style.backgroundColor = '#181f39';
+        document.getElementById(total_list[idx].id).style.textDecoration = 'none';
+        if (total_list[idx].q % 2 == 1)
+          document.getElementById(total_list[idx].id).style.color = '#181f39';
+        else
+          document.getElementById(total_list[idx].id).style.color = '#fafafa';
     }
-    color.style.backgroundColor= '#c1c1c1';
+    color.style.textDecoration = 'underline';
+    color.style.color = '#e44178';
     value = 'yes';
     select_list = {q, id, value};
 }
