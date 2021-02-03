@@ -86,6 +86,7 @@ function next_page() {
   {
     if (total_list[i].q == select_list.q){
       total_list[i] = select_list;
+      select_list = {};
       return ;
     }
   }
