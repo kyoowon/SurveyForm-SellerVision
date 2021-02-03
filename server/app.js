@@ -7,8 +7,8 @@ app.use(session({
     resave: false, //request 시 다시 저장할지, true-세션에 수정사항 없어도 다시 저장됨
     saveUninitialized: false, //세션에 저장할 내용이 없더라도 저장할건지
     cookie: {
-        secure:true,
-        maxAge:1000 * 60 * 60 //쿠키 유효기간 1시간
+        secure: false,
+        maxAge: 1000 * 60 * 60 //쿠키 유효기간 1시간
     }
 
 }));
@@ -38,8 +38,8 @@ app.post('/api/logout', async (request, res) => {
 const sql = require('./sql.js');
 
 app.post('/api/:alias', async (request, res) => {
-    if(!request.session.email){
-        return res.status(401).send({})
+    if(!request.session.email){ //로그인 안했으면 에러메세지
+        return res.status(401).send({error:'You need to login.'});
     }
     try {
         res.send(await req.db(request.params.alias));
