@@ -73,7 +73,7 @@ ul,li{
 
 .container {
     position: relative;
-    width: 70%;
+    width: 60%;
     height: 60%;
     margin: 10% auto;
     border-radius: 5px;
@@ -128,6 +128,9 @@ ul,li{
   text-align: left;
 }
 
+.select:hover {
+  color:#e44178;
+}
 
 /* next button */
 
@@ -369,7 +372,7 @@ textarea:hover {
 
 .Q_header_bold
 {
-  font-size: 60px;
+  font-size: 30px;
   display: inline;
 }
 
@@ -377,14 +380,4 @@ textarea:hover {
 {
   font-size: 30px;
   display: inline;
-}
-
-@media (max-width: 600px) {
-  .Q_header_bold {
-    font-size: 30px;
-  }
-
-  .Q_header {
-    font-size: 20px;
-  }
 }

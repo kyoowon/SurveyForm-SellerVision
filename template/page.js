@@ -110,3 +110,7 @@ function submit_form(){
   }
 }
 
+function change_next_color(id){
+  if (select_list.id != null)
+    document.getElementById(id).style.backgroundColor = "#ff6b51";
+}
