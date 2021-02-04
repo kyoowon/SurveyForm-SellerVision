@@ -14,3 +14,16 @@ var app = http.createServer(function(request,response){
     
 });
 app.listen(3000);
+
+dbconfig = require('./database_survey');
+var mysql = require('mysql');
+var dbconn = mysql.createConnection(dbconfig); 
+
+dbconn.connect(function (err) {
+  if (!err) {
+      console.log("Database is connected!");
+  } else {
+      console.log("Error connecting database...nn :" + err);
+  }
+})
+dbconn.end();

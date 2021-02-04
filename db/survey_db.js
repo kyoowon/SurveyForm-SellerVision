@@ -29,35 +29,35 @@ for(var i in list){
 params.splice(9, 2);
 // params.splice(10);
 console.log(params)
-// dbconn.connect(function (err) {
-//     if (!err) {
-//         console.log("Database is connected!");
-//     } else {
-//         console.log("Error connecting database...nn :" + err);
-//     }
-// })
-// var sql2 = "SELECT * FROM survey_re";
+dbconn.connect(function (err) {
+    if (!err) {
+        console.log("Database is connected!");
+    } else {
+        console.log("Error connecting database...nn :" + err);
+    }
+})
+var sql2 = "SELECT * FROM survey_re";
 
-//     var sql = "INSERT INTO survey_re (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q12, Q13,Q14,Q15) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
-//     dbconn.query(sql, params, function (error, rows, fields) {
-//         if (error) {
-//             console.log(error);
-//         } else {
-//             console.log('rows', rows);
-//             //console.log('fields',fields);
-//         }
-//     });
+    var sql = "INSERT INTO survey_re (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q12, Q13,Q14,Q15) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    dbconn.query(sql, params, function (error, rows, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('rows', rows);
+            //console.log('fields',fields);
+        }
+    });
 
 
-// dbconn.query(sql2, function (error, rows, fields) {
-//     if (error) {
-//         console.log(error);
-//     } else {
-//         console.log('rows', rows);
-//         //console.log('fields',fields);
-//     }
-// });
-// dbconn.end();
+dbconn.query(sql2, function (error, rows, fields) {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log('rows', rows);
+        //console.log('fields',fields);
+    }
+});
+dbconn.end();
 
 
 // var dbconfig = require('./config/database_survey.js');
