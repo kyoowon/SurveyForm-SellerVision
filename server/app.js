@@ -28,15 +28,18 @@ const db = {
 };
 
 app.get('/', function(req, res){
-    fs.readFile('../template/page.html', function(error, data){
+    fs.readFile('./template/title.html', function(error, data){
         if(error){
             console.log(error);
         }else{
-            res.writeHead(200, {'Content-Type':'text/html'});
+            res.writeHead(200, {'Content-Type':'html'});
             res.end(data);
         }
     });
 });
+
+// app.use(express.static('../template/title.html'));
+
 const dbPool = require('mysql').createPool(db);
 
 app.post('/api/login', async (request, res) => {
