@@ -28,15 +28,23 @@ function mult_select(q, id) {
   var color = document.getElementById(id);
   if (color.getAttribute("value") != "no")
   {
-    if (q % 2 != 0)
-      color.style.backgroundColor = '#fafafa';
+    if (q % 2 != 1)
+    {
+      color.style.color = '#fafafa';
+      color.style.textDecoration = 'none';
+
+    }
     else
-      color.style.backgroundColor = '#181f39';
+    {
+      color.style.color = '#181f39';
+      color.style.textDecoration = 'none';
+    }
     document.getElementById(id).setAttribute("value","no");
     console.log('ok')
   }  
   else {
-    color.style.backgroundColor= '#c1c1c1';
+    color.style.color = '#e44178';
+    color.style.textDecoration = 'underline';
     color.setAttribute("value","yes");
   }
   var value = color.getAttribute("value");
@@ -70,9 +78,9 @@ function click_select(q, id) {
     {
         document.getElementById(total_list[idx].id).style.textDecoration = 'none';
         if (total_list[idx].q % 2 == 1)
-          document.getElementById(total_list[idx].id).style.color = '#181f39';
+          document.getElementById(total_list[idx].id).style.color = '#979797';
         else
-          document.getElementById(total_list[idx].id).style.color = '#fafafa';
+          document.getElementById(total_list[idx].id).style.color = '#979797';
     }
     color.style.textDecoration = 'underline';
     color.style.color = '#e44178';
@@ -100,5 +108,39 @@ function submit_form(){
     frist = total_list[i].id.indexOf("a");
     total_list[i].id =parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
   }
+  var dbconfig = require('./config/database_survey.js');
+    var mysql = require('mysql');
+    var dbconn = mysql.createConnection(dbconfig); //< DB Connection~!!
+    var sql = "INSERT INTO servey_re * VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    var params;
+    
+    dbconn.connect(function (err) {
+        if (!err) {
+            console.log("Database is connected!");
+        } else {
+            console.log("Error connecting database...nn :" + err);
+        }
+
+
+        dbconn.query(sql, params, function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('rows', rows);
+                //console.log('fields',fields);
+            }
+        });
+        var sql2 = "SELECT * FROM servey_re";
+
+        dbconn.query(sql2, function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('rows', rows);
+                //console.log('fields',fields);
+            }
+        });
+        dbconn.end();
+    });
 }
 
