@@ -26,6 +26,7 @@ body
 ul,li{
     list-style:none;
 }
+
 .slide{
     overflow:hidden;
     position:relative;
@@ -33,10 +34,12 @@ ul,li{
     color: #181f39;
     background-color:#fafafa;
 }
+
 .slide ul{
     width:calc(1800vw * 18);
     display:flex;
 }
+
 .slide li{
     width:calc(1800vw / 18);
     height:100vh;
@@ -73,19 +76,7 @@ ul,li{
     width: 70%;
     height: 60%;
     margin: 10% auto;
-
     border-radius: 5px;
-}
-.num {
-  display: flex;
-  font-size: 150%;
-  place-content: center;
-}
-.num .Q_header_bold {
-  font-family: 'GmarketSansBold';
-}
-.num .Q_header {
-  font-family: 'GmarketSans';
 }
 
 .outer {
@@ -93,7 +84,6 @@ ul,li{
     width: 100%;
     height: 100%;
 }
-
 
 .inner {
     display: block;
@@ -118,6 +108,7 @@ ul,li{
   font-family: 'GmarketSans';
 }
 
+
 .answer label {
   justify-content: space-between;
 }
@@ -136,6 +127,7 @@ ul,li{
   margin-right: 20px;
   text-align: left;
 }
+
 
 /* next button */
 
@@ -377,7 +369,7 @@ textarea:hover {
 
 .Q_header_bold
 {
-  font-size: 60px;
+  font-size: 40px;
   display: inline;
 }
 
@@ -385,4 +377,14 @@ textarea:hover {
 {
   font-size: 30px;
   display: inline;
+}
+
+@media (max-width: 600px) {
+  .Q_header_bold {
+    font-size: 25px;
+  }
+
+  .Q_header {
+    font-size: 20px;
+  }
 }

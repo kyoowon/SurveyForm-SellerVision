@@ -1,0 +1,50 @@
+@media (max-width: 640px) {
+  .question {
+    font-size: 30px;
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-bottom: 3%;
+    font-family: 'GmarketSansBold';
+  }
+
+  .container {
+    position: relative;
+    width: 90%;
+    height: 60%;
+    margin: 10% auto;
+    border-radius: 5px;
+  }
+  .outer {
+    padding-top: 50px;
+  }
+  .answer {
+    margin-top: 10px;
+    padding-left: 0px;
+    font-family: 'GmarketSans';
+  }
+  .select {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+  }
+
+  .Q_header_bold {
+    font-size: 25px;
+  }
+
+  .Q_header {
+    font-size: 20px;
+  }
+
+  .button_box {
+    position: fixed;
+    bottom: 10%;
+    width: 80%;
+    height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .inner{
+    margin-top: 3%;
+  }
+}
