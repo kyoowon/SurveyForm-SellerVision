@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const session = require('express-session');
+var fs = require('fs');
+
 
 app.use(session({
     secret: 'AKSOE@#@@@$@ALFJW', //secret key 생성하고 싶은 문자열 넣음
@@ -25,6 +27,16 @@ const db = {
     password : 'ekdms57661!',
 };
 
+app.get('/', function(req, res){
+    fs.readFile('../template/page.html', function(error, data){
+        if(error){
+            console.log(error);
+        }else{
+            res.writeHead(200, {'Content-Type':'text/html'});
+            res.end(data);
+        }
+    });
+});
 const dbPool = require('mysql').createPool(db);
 
 app.post('/api/login', async (request, res) => {
