@@ -15,13 +15,13 @@ function find_id(q)
 
 function check_answer_count(id){
   next_page(); 
-  if (total_list.length != 13){
-    document.getElementById(id).setAttribute('for', 'pos1');
-    window.alert("모든 문항을 선택해주십시오.");
-  }
-  else{
+  // if (total_list.length != 13){
+  //   document.getElementById(id).setAttribute('for', 'pos1');
+  //   window.alert("모든 문항을 선택해주십시오.");
+  // }
+  // else{
     document.getElementById(id).setAttribute('for', 'pos16');
-  }
+  // }
 }
 
 temp_list = [];
@@ -105,11 +105,21 @@ function next_page() {
 }
 
 function submit_form(){
+  var el;
+  var add;
   for(i in total_list)
   {
     frist = total_list[i].id.indexOf("a");
-    total_list[i].id =parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
+    total_list[i].id = parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
+    index_list.push(total_list[i].id);
+    el = document.createElement("input");
+    el.type="hidden"
+    el.name="test"
+    el.value=total_list[i].id;
+    document.forms.appendChild(el);
   }
+
+  document.forms.submit();
 }
 
 function change_next_color(id){
