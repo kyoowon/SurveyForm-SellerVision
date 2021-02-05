@@ -1,10 +1,10 @@
-const express = require('express');
+s = require('express');
 const app = express();
 const session = require('express-session');
 var fs = require('fs');
 
 
-app.use(session({
+app.use(session({const expres
     secret: 'AKSOE@#@@@$@ALFJW', //secret key 생성하고 싶은 문자열 넣음
     resave: false, //request 시 다시 저장할지, true-세션에 수정사항 없어도 다시 저장됨
     saveUninitialized: false, //세션에 저장할 내용이 없더라도 저장할건지
@@ -28,15 +28,18 @@ const db = {
 };
 
 app.get('/', function(req, res){
-    fs.readFile('../template/page.html', function(error, data){
+    fs.readFile('./template/title.html', function(error, data){
         if(error){
             console.log(error);
         }else{
-            res.writeHead(200, {'Content-Type':'text/html'});
+            res.writeHead(200, {'Content-Type':'html'});
             res.end(data);
         }
     });
 });
+
+// app.use(express.static('../template/title.html'));
+
 const dbPool = require('mysql').createPool(db);
 
 app.post('/api/login', async (request, res) => {

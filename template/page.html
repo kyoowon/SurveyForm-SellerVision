@@ -28,7 +28,7 @@
     <input type="radio" name="pos" id="pos13" style="display: none;"  onclick="next_page()">
     <input type="radio" name="pos" id="pos14" style="display: none;"  onclick="next_page()">
     <input type="radio" name="pos" id="pos15" style="display: none;"  onclick="next_page()">
-    <input type="radio" name="pos" id="pos16" style="display: none;"  onclick="next_page()">
+    <input type="radio" name="pos" id="pos16" style="display: none;"  onclick="next_page();">
     <ul>
       <li>
         <div class="container">
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="button_box">
-          <button class="next" id = "q1 nb" style="float: right;"><label for="pos2" style="cursor: pointer;" onclick="next_page();"><a href="javescript:../db/survey_db.js"></a>다음</label></button>
+          <button class="next" id = "q1 nb" style="float: right;"><label for="pos2" style="cursor: pointer;" onclick="next_page();">다음</label></button>
           </div>
         </div>
       </li>
@@ -318,7 +318,7 @@
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos14" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id ="q15 nb" style="float: right;"><label for="pos16" style="cursor: pointer;" onclick="next_page();">다음</label></button>
+          <button class="next" id ="q15 nb" style="float: right;"><label style="cursor: pointer;" id="q15 label" onclick="check_answer_count(id);">다음</label></button>
         </div>
       </li>
       <li>
@@ -327,12 +327,12 @@
             <header style="display: block;">상담을 원하시면<br>정보를 입력해주세요</header>
             <div class="inner" style="display: block;">
               <div>
-                <form id="form" action="localhost:3000/report" class="topBefore" href="#">
-                      <input id="name" type="text" placeholder="이름(업체명/상호명)">
-                      <input id="product" type="text" placeholder="상품명 / 카테고리">
-                      <input id="email" type="text" placeholder="E-MAIL">
-                      <textarea id="message" type="text" placeholder="궁금하신 부분"></textarea>
-                  <a id= "submit" onclick="submit_form();" href="report.html" >Submit!</a>
+                <form id="form" action="http://localhost:3000/report" class="topBefore" method="POST" href="#">
+                      <input id="name" name="name" type="text" placeholder="이름(업체명/상호명)">
+                      <input id="product" name="product" type="text" placeholder="상품명 / 카테고리">
+                      <input id="email" name="email" type="text" placeholder="E-MAIL">
+                      <textarea id="message" name="etc" type="text" placeholder="궁금하신 부분"></textarea>
+                      <input id="submit" type="submit" onclick="submit_form();">
                 </form>
             </div>
           </div>
@@ -355,7 +355,7 @@
       <label for="pos13"></label>
       <label for="pos14"></label>
       <label for="pos15"></label>
-      <label for="pos16"></label>
+      <label for="pos16" style="display: none;"></label>
     </p>
   </div>
 </body>

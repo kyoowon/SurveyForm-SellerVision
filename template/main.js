@@ -1,55 +1,61 @@
 var http = require('http');
 var fs = require('fs');
-var url = require('url')
-var express = require('express');
-var appl = express();
+var qs = require('querystring');
 
+dbconfig = require('./database_survey');
+var mysql = require('mysql');
+const { Script } = require('vm');
+var dbconn = mysql.createConnection(dbconfig);
+var params = new Array();
 
-var app = http.createServer(function(request,response){
-  var _url = request.url;
-  var queryData = url.parse(_url, true).query;
-  var queryname = url.parse(_url, true).pathname;
-
-  appl.use(express.static(__dirname)); // 1
-
-  var port = 3000;
-  app.listen(port, function(){
-  console.log('server on! http://localhost:'+ port);
-  });
-  // if (queryname === '/'){
-  //   if (queryData.id === undefined){
-  //     fs.readFile(`data/title`, 'utf8', function(err, description){
-  //       var template = `${description}`;
-  //       response.end(template);
-  //   })
-  // } else {
-  //     fs.readFile(`data/${queryData.id}`, 'utf8', function(err, description){
-  //       var template = `${description}`;
-  //       response.end(template);
-  //   })
-  // }
-  // } else {
-  //     response.writeHead(404);
-  //     response.end('Not found');
-  // }
-});
-// app.listen(3030);
-
-
-var http = require('http');
-var fs = require('fs');
-var url = require('url');
- 
-var app = http.createServer(function(request,response){
-    var _url = request.url;
-    var queryData = url.parse(_url, true).query;
-    var pathname = url.parse(_url, true).pathname;
+var app = http.createServer(function (request, response) {
+  var url = request.url;
+  console.log(url)
+  if (request.url == '/') {
+    url = '/title.html';
+  }
+  else if (request.url == '/favicon.ico') {
+    return response.writeHead(404);
+  }
+  else if (request.url == "/report") {
+    url = '/report.html';
+    list=new Array();
+    var test = '';
+    var body2 = ''
+    request.on('data', function (data) { body2 = body2 + data; });
+    request.on('end', function () {
+      var post = qs.parse(body2);
+      test = post.test;
+      console.log(test);
+    })
+    var body = '';
+    var name = "";
+    var email ="";
+    var etc = "";
+    var product = "";
+    request.on('data', function (data) { body = body + data; });
+    request.on('end', function () {
+      var post = qs.parse(body);
+      test = post.test;
+      name = post.name;
+      email=post.email;
+      etc=post.etc;
+      product=post.product
+      params =[name, product, etc, email];
+      console.log(test);
+      var sql = "INSERT INTO survey_form (name, product, etc, email) VALUES (?,?,?,?)";
+      console.log(params)
+      dbconn.query(sql, params, function (error, rows) {
+          if (error) {
+              console.log(error);
+          }
+      });
+    })
     
-
-    
- 
- 
- 
+  }
+  response.writeHead(200);
+  response.end(fs.readFileSync(__dirname + url));
 });
 app.listen(3000);
- 
+
+// dbconn.end();
