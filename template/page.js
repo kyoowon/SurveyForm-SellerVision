@@ -13,12 +13,14 @@ function find_id(q)
 }
 
 
-function check_answer(){
-  if (total_list.length != 16){
+function check_answer_count(id){
+  next_page(); 
+  if (total_list.length != 13){
+    document.getElementById(id).setAttribute('for', 'pos1');
     window.alert("모든 문항을 선택해주십시오.");
   }
   else{
-    next_page(); 
+    document.getElementById(id).setAttribute('for', 'pos16');
   }
 }
 
@@ -108,7 +110,6 @@ function submit_form(){
     frist = total_list[i].id.indexOf("a");
     total_list[i].id =parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
   }
-  
 }
 
 function change_next_color(id){
