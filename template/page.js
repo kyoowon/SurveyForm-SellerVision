@@ -108,40 +108,8 @@ function submit_form(){
     frist = total_list[i].id.indexOf("a");
     total_list[i].id =parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
   }
-  // var dbconfig = require('./config/database_survey.js');
-  //   var mysql = require('mysql');
-  //   var dbconn = mysql.createConnection(dbconfig); //< DB Connection~!!
-  //   var sql = "INSERT INTO servey_re * VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-  //   var params;
 
-  //   dbconn.connect(function (err) {
-  //       if (!err) {
-  //           console.log("Database is connected!");
-  //       } else {
-  //           console.log("Error connecting database...nn :" + err);
-  //       }
-
-
-  //       dbconn.query(sql, params, function (error, rows, fields) {
-  //           if (error) {
-  //               console.log(error);
-  //           } else {
-  //               console.log('rows', rows);
-  //               //console.log('fields',fields);
-  //           }
-  //       });
-  //       var sql2 = "SELECT * FROM servey_re";
-
-  //       dbconn.query(sql2, function (error, rows, fields) {
-  //           if (error) {
-  //               console.log(error);
-  //           } else {
-  //               console.log('rows', rows);
-  //               //console.log('fields',fields);
-  //           }
-  //       });
-  //       dbconn.end();
-  //   });
+  var form = document.setAttribute('from');
 }
 
 function change_next_color(id){
