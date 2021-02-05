@@ -2,6 +2,7 @@
 var total_list = []
 var select_list = {}
 
+
 function find_id(q)
 {
   for(i in total_list)
@@ -111,15 +112,15 @@ function submit_form(){
   {
     frist = total_list[i].id.indexOf("a");
     total_list[i].id = parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
-    index_list.push(total_list[i].id);
-    el = document.createElement("input");
-    el.type="hidden"
-    el.name="test"
-    el.value=total_list[i].id;
-    document.forms.appendChild(el);
+    
+    // el = document.createElement("input");
+    // el.type="hidden"
+    // el.name="test"
+    // el.value=total_list[i].id;
+    // document.forms.appendChild(el);
   }
-
-  document.forms.submit();
+  exports.test=total_list[i].id;
+  // document.forms.submit();
 }
 
 function change_next_color(id){
@@ -135,3 +136,4 @@ function change_next_color(id){
   // }
 
 }
+

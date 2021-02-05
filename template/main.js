@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var qs = require('querystring');
+var test=require('./page.js');
 
 dbconfig = require('./database_survey');
 var mysql = require('mysql');
@@ -19,15 +20,17 @@ var app = http.createServer(function (request, response) {
   }
   else if (request.url == "/report") {
     url = '/report.html';
-    list=new Array();
-    var test = '';
-    var body2 = ''
-    request.on('data', function (data) { body2 = body2 + data; });
-    request.on('end', function () {
-      var post = qs.parse(body2);
-      test = post.test;
-      console.log(test);
-    })
+    console.log(test.test);
+    // console.log(test.temp_list);
+    // list=new Array();
+    // var test = '';
+    // var body2 = ''
+    // request.on('data', function (data) { body2 = body2 + data; });
+    // request.on('end', function () {
+    //   var post = qs.parse(body2);
+    //   test = post.test;
+    //   console.log(test);
+    // })
     var body = '';
     var name = "";
     var email ="";
@@ -36,13 +39,11 @@ var app = http.createServer(function (request, response) {
     request.on('data', function (data) { body = body + data; });
     request.on('end', function () {
       var post = qs.parse(body);
-      test = post.test;
       name = post.name;
       email=post.email;
       etc=post.etc;
       product=post.product
       params =[name, product, etc, email];
-      console.log(test);
       var sql = "INSERT INTO survey_form (name, product, etc, email) VALUES (?,?,?,?)";
       console.log(params)
       dbconn.query(sql, params, function (error, rows) {
