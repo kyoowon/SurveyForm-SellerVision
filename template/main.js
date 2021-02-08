@@ -1,17 +1,14 @@
 var http = require('http');
 var fs = require('fs');
 var qs = require('querystring');
-var test=require('./page.js');
 
 dbconfig = require('./database_survey');
 var mysql = require('mysql');
-const { Script } = require('vm');
 var dbconn = mysql.createConnection(dbconfig);
 var params = new Array();
 
 var app = http.createServer(function (request, response) {
   var url = request.url;
-  console.log(url)
   if (request.url == '/') {
     url = '/title.html';
   }
@@ -20,17 +17,6 @@ var app = http.createServer(function (request, response) {
   }
   else if (request.url == "/report") {
     url = '/report.html';
-    console.log(test.test);
-    // console.log(test.temp_list);
-    // list=new Array();
-    // var test = '';
-    // var body2 = ''
-    // request.on('data', function (data) { body2 = body2 + data; });
-    // request.on('end', function () {
-    //   var post = qs.parse(body2);
-    //   test = post.test;
-    //   console.log(test);
-    // })
     var body = '';
     var name = "";
     var email ="";
@@ -44,9 +30,18 @@ var app = http.createServer(function (request, response) {
       etc=post.etc;
       product=post.product
       params =[name, product, etc, email];
+      params2=[];
+      for (i in post.total){
+        params2.push(post.total[i])
+      }
       var sql = "INSERT INTO survey_form (name, product, etc, email) VALUES (?,?,?,?)";
-      console.log(params)
       dbconn.query(sql, params, function (error, rows) {
+          if (error) {
+              console.log(error);
+          }
+      });
+      var sql2 = "INSERT INTO survey_re (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q12, Q13,Q14,Q15) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      dbconn.query(sql2, params2, function (error, rows) {
           if (error) {
               console.log(error);
           }

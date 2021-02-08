@@ -1,4 +1,3 @@
-
 var total_list = []
 var select_list = {}
 
@@ -16,13 +15,13 @@ function find_id(q)
 
 function check_answer_count(id){
   next_page(); 
-  // if (total_list.length != 13){
-  //   document.getElementById(id).setAttribute('for', 'pos1');
-  //   window.alert("모든 문항을 선택해주십시오.");
-  // }
-  // else{
+  if (total_list.length != 13){
+    document.getElementById(id).setAttribute('for', 'pos1');
+    window.alert("모든 문항을 선택해주십시오.");
+  }
+  else{
     document.getElementById(id).setAttribute('for', 'pos16');
-  // }
+  }
 }
 
 temp_list = [];
@@ -106,28 +105,56 @@ function next_page() {
 }
 
 function submit_form(){
-  var el;
-  var add;
   for(i in total_list)
   {
-    frist = total_list[i].id.indexOf("a");
+    frist = total_list[i].id.indexOf('a');
     total_list[i].id = parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
   }
-  
+  console.log("ok" + total_list);
   var newForm = document.createElement('form');
   newForm.name = 'total_list'; 
   newForm.method = 'post'; 
   newForm.action = 'http://localhost:3000/report'; 
 
   for(var i in total_list){
-    qusestion_answer = document.createElement('input');
+    var qusestion_answer = document.createElement('input');
     qusestion_answer.setAttribute("type", "hidden");
-    qusestion_answer.setAttribute("name", "q" + total_list[i].q);
+    qusestion_answer.setAttribute("name", "total");
     qusestion_answer.setAttribute("value", total_list[i].id);
     newForm.appendChild(qusestion_answer);
   }
+
+  var name_value = document.getElementsByName('name')[0].value;
+  var email_value = document.getElementsByName('email')[0].value;
+  var product_value = document.getElementsByName('product')[0].value;
+  var etc_value = document.getElementsByName('etc')[0].value;
+  
+  NAME = document.createElement('input');
+  NAME.setAttribute("type", "hidden");
+  NAME.setAttribute("name", "name");
+  NAME.setAttribute("value", name_value);
+  newForm.appendChild(NAME);
+
+  EMAIL = document.createElement('input');
+  EMAIL.setAttribute("type", "hidden");
+  EMAIL.setAttribute("name", "email");
+  EMAIL.setAttribute("value", email_value);
+  newForm.appendChild(EMAIL);
+
+  PRODUCT = document.createElement('input');
+  PRODUCT.setAttribute("type", "hidden");
+  PRODUCT.setAttribute("name", "product");
+  PRODUCT.setAttribute("value", product_value);
+  newForm.appendChild(PRODUCT);
+
+  ETC = document.createElement('input');
+  ETC.setAttribute("type", "hidden");
+  ETC.setAttribute("name", "etc");
+  ETC.setAttribute("value", etc_value);
+  newForm.appendChild(ETC);
+
+
  document.body.appendChild(newForm);
- console.log(newForm);
  newForm.submit();
 }
 
@@ -137,10 +164,4 @@ function change_next_color(id){
     document.getElementById(id).style.color = "#fff"
     document.getElementById(id).style.shadow = "#ff6b51"
   }
-  // else{
-  //   document.getElementById(id).style.backgroundColor = "#e44178";
-  //   document.getElementById(id).style.color = "#fff"
-  //   document.getElementById(id).style.shadow = "#ff6b51"
-  // }
-
 }
