@@ -38,15 +38,15 @@
             <div class="question">기업 정보에 관한 질문입니다.</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q1 a1" href='javascript:void(0);' value ='no' onclick="click_select(1, id);change_next_color('q1 nb');">1. 제조사</a>
-                <a class="select" id="q1 a2" href='javascript:void(0);' value ='no' onclick="click_select(1, id);change_next_color('q1 nb');">2. 유통사</a>
-                <a class="select" id="q1 a3" href='javascript:void(0);' value ='no' onclick="click_select(1, id);change_next_color('q1 nb');">3. 제조사+유통사</a>
-                <a class="select" id="q1 a4" href='javascript:void(0);' value ='no' onclick="click_select(1, id);change_next_color('q1 nb');">4. 기타</a>
+                <a class="select" id="q1 a1" href='javascript:void(0);' value ='no' onclick="click_select(1, id);change_next_color('q1 nb', 'q1 nl', 2);">1. 제조사</a>
+                <a class="select" id="q1 a2" href='javascript:void(0);' value ='no' onclick="click_select(1, id);change_next_color('q1 nb', 'q1 nl', 2);">2. 유통사</a>
+                <a class="select" id="q1 a3" href='javascript:void(0);' value ='no' onclick="click_select(1, id);change_next_color('q1 nb', 'q1 nl', 2);">3. 제조사+유통사</a>
+                <a class="select" id="q1 a4" href='javascript:void(0);' value ='no' onclick="click_select(1, id);change_next_color('q1 nb', 'q1 nl', 2);">4. 기타</a>
               </div>
             </div>
           </div>
           <div class="button_box">
-          <button class="next" id = "q1 nb" style="float: right;"><label for="pos2" style="cursor: pointer;" onclick="next_page();">다음</label></button>
+          <button class="next" id = "q1 nb" style="float: right;"><label id="q1 nl" style="cursor: pointer;" onclick="next_page();">다음</label></button>
           </div>
         </div>
       </li>
@@ -58,17 +58,17 @@
             <div class="question">홈쇼핑 필요성에 관한 질문입니다.</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q2 a1" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb');">1. 반드시(절실히) 필요하다</a>
-                <a class="select" id="q2 a2" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb');">2. 필요하다</a>
-                <a class="select" id="q2 a3" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb');">3. 보통이다</a>
-                <a class="select" id="q2 a4" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb');">4. 필요하지 않다</a>
-                <a class="select" id="q2 a5" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb');">5. 전혀 필요하지 않다</a>
+                <a class="select" id="q2 a1" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb', 'q2 nl', 3);">1. 반드시(절실히) 필요하다</a>
+                <a class="select" id="q2 a2" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb', 'q2 nl', 3);">2. 필요하다</a>
+                <a class="select" id="q2 a3" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb', 'q2 nl', 3);">3. 보통이다</a>
+                <a class="select" id="q2 a4" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb', 'q2 nl', 3);">4. 필요하지 않다</a>
+                <a class="select" id="q2 a5" href='javascript:void(0);' value ='no' onclick="click_select(2, id);change_next_color('q2 nb', 'q2 nl', 3);">5. 전혀 필요하지 않다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos1" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id = "q2 nb" style="float: right;"><label for="pos3" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id = "q2 nb" style="float: right;"><label id="q2 nl" style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -79,18 +79,18 @@
             <div class="question">홈쇼핑이 필요한 이유에 관한 질문입니다.</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q3 a1" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb');">1. 한 번에 많은 매출과 이익을 내고 싶어서</a>
-                <a class="select" id="q3 a2" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb');">2. 홍보하고 싶어서</a>
-                <a class="select" id="q3 a3" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb');">3. 재고를 판매하고 싶어서</a>
-                <a class="select" id="q3 a4" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb');">4. 홈쇼핑을 해 보라는 제안을 받아서</a>
-                <a class="select" id="q3 a5" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb');">5. 정부지원사업에 홈쇼핑 분야를 신청해서</a>
-                <a class="select" id="q3 a6" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb');">6. 기타</a>
+                <a class="select" id="q3 a1" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb', 'q3 nl', 4);">1. 한 번에 많은 매출과 이익을 내고 싶어서</a>
+                <a class="select" id="q3 a2" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb', 'q3 nl', 4);">2. 홍보하고 싶어서</a>
+                <a class="select" id="q3 a3" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb', 'q3 nl', 4);">3. 재고를 판매하고 싶어서</a>
+                <a class="select" id="q3 a4" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb', 'q3 nl', 4);">4. 홈쇼핑을 해 보라는 제안을 받아서</a>
+                <a class="select" id="q3 a5" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb', 'q3 nl', 4);">5. 정부지원사업에 홈쇼핑 분야를 신청해서</a>
+                <a class="select" id="q3 a6" href='javascript:void(0);' value ='no' onclick="click_select(3, id); change_next_color('q3 nb', 'q3 nl', 4);">6. 기타</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos2" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id="q3 nb" style="float: right;"><label for="pos4" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id="q3 nb" style="float: right;"><label id="q3 nl" style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
         </div>
       </li>
@@ -102,14 +102,14 @@
             <div class="question">상품과 관련된 특허가 등록되어 있나요?</div>
             <div class="inner">
               <div class="answer">
-               <a class="select" id="q4 a1" href='javascript:void(0);' value ='no' onclick="click_select(4, id); change_next_color('q4 nb');">1. 등록되어 있다</a>
-               <a class="select" id="q4 a2" href='javascript:void(0);' value ='no' onclick="click_select(4, id); change_next_color('q4 nb');">2. 등록되어 있지 않다</a>
+               <a class="select" id="q4 a1" href='javascript:void(0);' value ='no' onclick="click_select(4, id); change_next_color('q4 nb', 'q4 nl', 5);">1. 등록되어 있다</a>
+               <a class="select" id="q4 a2" href='javascript:void(0);' value ='no' onclick="click_select(4, id); change_next_color('q4 nb', 'q4 nl', 5);">2. 등록되어 있지 않다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos3" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id="q4 nb" style="float: right;"><label for="pos5" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id="q4 nb" style="float: right;"><label id="q4 nl" style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -120,14 +120,14 @@
             <div class="question">입점되어 있나요?</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q5 a1" href='javascript:void(0);' value ='no' onclick="click_select(5, id); change_next_color('q5 nb');">1. 입점되어 있다</a>
-                <a class="select" id="q5 a2" href='javascript:void(0);' value ='no' onclick="click_select(5, id); change_next_color('q5 nb');">2. 입점되어 있지 않다</a>
+                <a class="select" id="q5 a1" href='javascript:void(0);' value ='no' onclick="click_select(5, id); change_next_color('q5 nb', 'q5 nl', 6);">1. 입점되어 있다</a>
+                <a class="select" id="q5 a2" href='javascript:void(0);' value ='no' onclick="click_select(5, id); change_next_color('q5 nb', 'q5 nl', 6);">2. 입점되어 있지 않다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos4" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id = "q5 nb"style="float: right;"><label for="pos6" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id = "q5 nb"style="float: right;"><label id="q5 nl" style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -138,14 +138,14 @@
             <div class="question">국가공인인증기관에서 기술(기능)에 대한<br>시험성적서 또는 임상을 받으셨나요?</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q6 a1" href='javascript:void(0);' value ='no' onclick="click_select(6, id); change_next_color('q6 nb');">1. 인증 받았다</a>
-                <a class="select" id="q6 a2" href='javascript:void(0);' value ='no' onclick="click_select(6, id); change_next_color('q6 nb');">2. 인증 받지 않았다</a>
+                <a class="select" id="q6 a1" href='javascript:void(0);' value ='no' onclick="click_select(6, id); change_next_color('q6 nb', 'q6 nl', 7);">1. 인증 받았다</a>
+                <a class="select" id="q6 a2" href='javascript:void(0);' value ='no' onclick="click_select(6, id); change_next_color('q6 nb', 'q6 nl', 7);">2. 인증 받지 않았다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos5" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id = "q6 nb" style="float: right;"><label for="pos7" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id = "q6 nb" style="float: right;"><label id="q6 nl" style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -156,14 +156,14 @@
             <div class="question">홈쇼핑 진입을 위한 상품 독점구성이<br>가능한가요?</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q7 a1" href='javascript:void(0);' value ='no' onclick="click_select(7, id); change_next_color('q7 nb');">1. 가능하다</a>
-                <a class="select" id="q7 a2" href='javascript:void(0);' value ='no' onclick="click_select(7, id); change_next_color('q7 nb');">2. 불가능하다</a>
+                <a class="select" id="q7 a1" href='javascript:void(0);' value ='no' onclick="click_select(7, id); change_next_color('q7 nb', 'q7 nl', 8);">1. 가능하다</a>
+                <a class="select" id="q7 a2" href='javascript:void(0);' value ='no' onclick="click_select(7, id); change_next_color('q7 nb', 'q7 nl', 8);">2. 불가능하다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos6" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id = "q7 nb" style="float: right;"><label for="pos8" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id = "q7 nb" style="float: right;"><label id='q7 nl' style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -174,14 +174,14 @@
             <div class="question">정상가 대비 할인판매가를 20% 이상<br>가능한가요?</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q8 a1" href='javascript:void(0);' value ='no' onclick="click_select(8, id); change_next_color('q8 nb');">1. 가능하다</a>
-                <a class="select" id="q8 a2" href='javascript:void(0);' value ='no' onclick="click_select(8, id); change_next_color('q8 nb');">2. 불가능하다</a>
+                <a class="select" id="q8 a1" href='javascript:void(0);' value ='no' onclick="click_select(8, id); change_next_color('q8 nb', 'q8 nl', 9);">1. 가능하다</a>
+                <a class="select" id="q8 a2" href='javascript:void(0);' value ='no' onclick="click_select(8, id); change_next_color('q8 nb', 'q8 nl', 9);">2. 불가능하다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos7" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id = "q8 nb"style="float: right;"><label for="pos9" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id = "q8 nb"style="float: right;"><label  id='q8 nl' style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -192,14 +192,14 @@
             <div class="question">최저가 상품공급 및 공급률 50%<br>이내로 공급이 가능한가요?</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q9 a1" href='javascript:void(0);' value ='no' onclick="click_select(9, id); change_next_color('q9 nb');">1. 가능하다</a>
-                <a class="select" id="q9 a2" href='javascript:void(0);' value ='no' onclick="click_select(9, id); change_next_color('q9 nb');">2. 불가능하다</a>
+                <a class="select" id="q9 a1" href='javascript:void(0);' value ='no' onclick="click_select(9, id); change_next_color('q9 nb', 'q9 nl', 10);">1. 가능하다</a>
+                <a class="select" id="q9 a2" href='javascript:void(0);' value ='no' onclick="click_select(9, id); change_next_color('q9 nb', 'q9 nl', 10);">2. 불가능하다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos8" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id ="q9 nb" style="float: right;"><label for="pos10" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id ="q9 nb" style="float: right;"><label id='q9 nl' style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -251,17 +251,17 @@
             <div class="question">현재 유행(트렌드)하는 상품인가요?</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q12 a1" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb');">1. 매우 그렇다</a>
-                <a class="select" id="q12 a2" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb');">2. 그렇다</a>
-                <a class="select" id="q12 a3" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb');">3. 보통이다</a>
-                <a class="select" id="q12 a4" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb');">4. 아니다</a>
-                <a class="select" id="q12 a5" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb');">5. 매우 아니다</a>
+                <a class="select" id="q12 a1" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb', 'q12 nl', 13);">1. 매우 그렇다</a>
+                <a class="select" id="q12 a2" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb', 'q12 nl', 13);">2. 그렇다</a>
+                <a class="select" id="q12 a3" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb', 'q12 nl', 13);">3. 보통이다</a>
+                <a class="select" id="q12 a4" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb', 'q12 nl', 13);">4. 아니다</a>
+                <a class="select" id="q12 a5" href='javascript:void(0);' value ='no' onclick="click_select(12, id); change_next_color('q12 nb', 'q12 nl', 13);">5. 매우 아니다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos11" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id = "q12 nb" style="float: right;"><label for="pos13" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id = "q12 nb" style="float: right;"><label id='q12 nl' style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -272,17 +272,17 @@
             <div class="question">시제품 개발 이후, 제품 생산(양산) 횟수는<br>몇 회 인가요?</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q13 a1" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb');">1. 0회</a>
-                <a class="select" id="q13 a2" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb');">2. 1~2회</a>
-                <a class="select" id="q13 a3" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb');">3. 3~4회</a>
-                <a class="select" id="q13 a4" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb');">4. 5회 이상</a>
-                <a class="select" id="q13 a5" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb');">5. 세지 못할 만큼 많이</a>
+                <a class="select" id="q13 a1" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb', 'q13 nl', 14);">1. 0회</a>
+                <a class="select" id="q13 a2" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb', 'q13 nl', 14);">2. 1~2회</a>
+                <a class="select" id="q13 a3" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb', 'q13 nl', 14);">3. 3~4회</a>
+                <a class="select" id="q13 a4" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb', 'q13 nl', 14);">4. 5회 이상</a>
+                <a class="select" id="q13 a5" href='javascript:void(0);' value ='no' onclick="click_select(13, id); change_next_color('q13 nb', 'q13 nl', 14);">5. 세지 못할 만큼 많이</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos12" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id = "q13 nb" style="float: right;"><label for="pos14" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id = "q13 nb" style="float: right;"><label id='q13 nl' style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -293,14 +293,14 @@
             <div class="question">자체 공장 또는 OEM 계약 공장이 있나요?<br>(해외공장 포함)</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q14 a1" href='javascript:void(0);' value ='no' onclick="click_select(14, id); change_next_color('q14 nb');">1. 있다</a>
-                <a class="select" id="q14 a2" href='javascript:void(0);' value ='no' onclick="click_select(14, id); change_next_color('q14 nb');">2. 없다</a>
+                <a class="select" id="q14 a1" href='javascript:void(0);' value ='no' onclick="click_select(14, id); change_next_color('q14 nb', 'q14 nl', 15);">1. 있다</a>
+                <a class="select" id="q14 a2" href='javascript:void(0);' value ='no' onclick="click_select(14, id); change_next_color('q14 nb', 'q14 nl', 15);">2. 없다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos13" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id = "q14 nb"style="float: right;"><label for="pos15" style="cursor: pointer;" onclick="next_page()">다음</label></button>
+          <button class="next" id = "q14 nb"style="float: right;"><label id='q14 nl' style="cursor: pointer;" onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
@@ -311,14 +311,14 @@
             <div class="question">상품을 생산할 수 있는 자금을<br>1~2회 정도 준비가 가능한가요?<br> (ex : 1회분 평균 3,000세트 기준)</div>
             <div class="inner">
               <div class="answer">
-                <a class="select" id="q15 a1" href='javascript:void(0);' value ='no' onclick="click_select(15, id); change_next_color('q15 nb');">1. 가능하다</a>
-                <a class="select" id="q15 a2" href='javascript:void(0);' value ='no' onclick="click_select(15, id); change_next_color('q15 nb');">2. 불가능하다</a>
+                <a class="select" id="q15 a1" href='javascript:void(0);' value ='no' onclick="click_select(15, id); change_next_color('q15 nb', 'q15 nl', 16);">1. 가능하다</a>
+                <a class="select" id="q15 a2" href='javascript:void(0);' value ='no' onclick="click_select(15, id); change_next_color('q15 nb', 'q15 nl', 16);">2. 불가능하다</a>
               </div>
             </div>
           </div>
           <div class="button_box">
           <button class="next" style="float: left;"><label for="pos14" style="cursor: pointer;" onclick="next_page()">이전</label></button>
-          <button class="next" id ="q15 nb" style="float: right;"><label style="cursor: pointer;" id="q15 label" onclick="check_answer_count(id);">다음</label></button>
+          <button class="next" id ="q15 nb" style="float: right;"><label style="cursor: pointer;" id='q15 nl' onclick="next_page()">다음</label></button>
         </div>
       </li>
       <li>
