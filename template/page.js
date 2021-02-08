@@ -112,15 +112,23 @@ function submit_form(){
   {
     frist = total_list[i].id.indexOf("a");
     total_list[i].id = parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
-    
-    // el = document.createElement("input");
-    // el.type="hidden"
-    // el.name="test"
-    // el.value=total_list[i].id;
-    // document.forms.appendChild(el);
   }
-  exports.test=total_list[i].id;
-  // document.forms.submit();
+  
+  var newForm = document.createElement('form');
+  newForm.name = 'total_list'; 
+  newForm.method = 'post'; 
+  newForm.action = 'http://localhost:3000/report'; 
+
+  for(var i in total_list){
+    qusestion_answer = document.createElement('input');
+    qusestion_answer.setAttribute("type", "hidden");
+    qusestion_answer.setAttribute("name", "q" + total_list[i].q);
+    qusestion_answer.setAttribute("value", total_list[i].id);
+    newForm.appendChild(qusestion_answer);
+  }
+ document.body.appendChild(newForm);
+ console.log(newForm);
+ newForm.submit();
 }
 
 function change_next_color(id){
@@ -136,4 +144,3 @@ function change_next_color(id){
   // }
 
 }
-
