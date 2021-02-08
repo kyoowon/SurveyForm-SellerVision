@@ -6,6 +6,7 @@
 
 ## site link (사이트 주소)
 >> https://kyoowon.github.io/SurveyForm-SellerVision/template/title.html
+>> https://kyoowon.github.io/SurveyForm-SellerVision/template/title2.html
 
 <br>
 <br>
