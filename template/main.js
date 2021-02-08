@@ -1,8 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var qs = require('querystring');
-
-dbconfig = require('./database_survey');
+var dbconfig = require('./database_survey');
 var mysql = require('mysql');
 var dbconn = mysql.createConnection(dbconfig);
 var params = new Array();

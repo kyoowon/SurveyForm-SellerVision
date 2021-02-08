@@ -158,10 +158,11 @@ function submit_form(){
  newForm.submit();
 }
 
-function change_next_color(id){
+function change_next_color(nxt_d, nxt_l, id){
   if (select_list.id != null){
-    document.getElementById(id).style.backgroundColor = "#e44178";
-    document.getElementById(id).style.color = "#fff"
-    document.getElementById(id).style.shadow = "#ff6b51"
+    document.getElementById(nxt_d).style.backgroundColor = "#e44178";
+    document.getElementById(nxt_d).style.color = "#fff"
+    document.getElementById(nxt_d).style.shadow = "#ff6b51"
+    document.getElementById(nxt_l).setAttribute('for', 'pos' + id);
   }
 }
