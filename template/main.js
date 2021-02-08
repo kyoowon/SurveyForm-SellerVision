@@ -8,7 +8,6 @@ var params = new Array();
 
 var app = http.createServer(function (request, response) {
   var url = request.url;
-  console.log(url)
   if (request.url == '/') {
     url = '/title.html';
   }
@@ -17,8 +16,7 @@ var app = http.createServer(function (request, response) {
   }
   else if (request.url == "/report") {
     url = '/report.html';
-    list=new Array();
-    var body = "";
+    var body = '';
     var name = "";
     var email ="";
     var etc = "";
@@ -26,16 +24,23 @@ var app = http.createServer(function (request, response) {
     request.on('data', function (data) { body = body + data; });
     request.on('end', function () {
       var post = qs.parse(body);
-      test = post.test;
       name = post.name;
       email=post.email;
       etc=post.etc;
       product=post.product
       params =[name, product, etc, email];
-      console.log(test);
+      params2=[];
+      for (i in post.total){
+        params2.push(post.total[i])
+      }
       var sql = "INSERT INTO survey_form (name, product, etc, email) VALUES (?,?,?,?)";
-      console.log(params)
       dbconn.query(sql, params, function (error, rows) {
+          if (error) {
+              console.log(error);
+          }
+      });
+      var sql2 = "INSERT INTO survey_re (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q12, Q13,Q14,Q15) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      dbconn.query(sql2, params2, function (error, rows) {
           if (error) {
               console.log(error);
           }
