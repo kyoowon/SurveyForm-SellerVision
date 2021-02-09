@@ -2,7 +2,7 @@
 ### 본 프로젝트는 21년 동계 인턴쉽 과정에서 기업에서 요구하는 요구사항을 기반으로 제작된 기업 설문조사 폼 형식
 ### (사용 언어 : html, CSS, JavaScript + NodeJs + MySQL)
 
-https://img.shields.io/static/v1?label=a&message=CSS&color=orange
+![](https://img.shields.io/static/v1?label=💻&message=CSS&color=orange)
 
 
 <br>
