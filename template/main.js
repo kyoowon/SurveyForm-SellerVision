@@ -27,11 +27,12 @@ var app = http.createServer(function (request, response) {
       name = post.name;
       email=post.email;
       etc=post.etc;
-      product=post.product
+      product=post.product;
       params =[name, product, etc, email];
-      params2=[];
+      params_total=[product];
+
       for (i in post.total){
-        params2.push(post.total[i])
+        params_total.push(post.total[i])
       }
       var sql = "INSERT INTO survey_form (name, product, etc, email) VALUES (?,?,?,?)";
       dbconn.query(sql, params, function (error, rows) {
@@ -39,12 +40,32 @@ var app = http.createServer(function (request, response) {
               console.log(error);
           }
       });
-      var sql2 = "INSERT INTO survey_re (Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q12, Q13,Q14,Q15) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
-      dbconn.query(sql2, params2, function (error, rows) {
+      var sql_total = "INSERT INTO survey_re (product, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q12, Q13, Q14, Q15) VALUES (?, ?,?,?,?,?,?,?,?,?,?,?,?,?)";
+      dbconn.query(sql_total, params_total, function (error, rows) {
           if (error) {
               console.log(error);
           }
       });
+
+      var sql_mult10 = "INSERT INTO survey_mul10 (product, Q10) VALUES (?,?)";
+      for (i in post.Q10){
+        dbconn.query(sql_mult10, [product, post.Q10[i]], function (error, rows) {
+          if (error) {
+              console.log(error);
+          }
+      });
+      }
+      
+
+      var sql_mult11 = "INSERT INTO survey_mul11 (product, Q11) VALUES (?,?)";
+      for (i in post.Q11){
+        dbconn.query(sql_mult11, [product, post.Q11[i]], function (error, rows) {
+          if (error) {
+              console.log(error);
+          }
+      });
+      }
+      
     })
     
   }

@@ -12,18 +12,6 @@ function find_id(q)
   return null;
 }
 
-
-function check_answer_count(id){
-  next_page(); 
-  if (total_list.length != 13){
-    document.getElementById(id).setAttribute('for', 'pos1');
-    window.alert("모든 문항을 선택해주십시오.");
-  }
-  else{
-    document.getElementById(id).setAttribute('for', 'pos16');
-  }
-}
-
 temp_list = [];
 
 function mult_select(q, id) {
@@ -104,13 +92,24 @@ function next_page() {
   select_list = {};
 }
 
+mult_list = []
+
 function submit_form(){
   for(i in total_list)
   {
     frist = total_list[i].id.indexOf('a');
     total_list[i].id = parseInt(total_list[i].id.slice(frist + 1, total_list[i].length));
   }
-  console.log("ok" + total_list);
+
+  for(i in temp_list)
+  {
+    if(temp_list[i].value == 'yes')
+    {
+      frist = temp_list[i].id.indexOf('a');
+      mult_list.push({q : temp_list[i].q, id : parseInt(temp_list[i].id.slice(frist + 1, temp_list[i].length))});
+    }
+  }
+
   var newForm = document.createElement('form');
   newForm.name = 'total_list'; 
   newForm.method = 'post'; 
@@ -122,6 +121,14 @@ function submit_form(){
     qusestion_answer.setAttribute("name", "total");
     qusestion_answer.setAttribute("value", total_list[i].id);
     newForm.appendChild(qusestion_answer);
+  }
+
+  for(var i in mult_list){
+    var mult_answer = document.createElement('input');
+    mult_answer.setAttribute("type", "hidden");
+    mult_answer.setAttribute("name", "Q" + mult_list[i].q);
+    mult_answer.setAttribute("value", mult_list[i].id);
+    newForm.appendChild(mult_answer);
   }
 
   var name_value = document.getElementsByName('name')[0].value;
