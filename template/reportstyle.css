@@ -36,9 +36,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-    background-color: pink;
+    background-color: rgb(255, 234, 238);
     border-radius: 5px;
-
 }
 .content {
     padding: 1rem;
@@ -47,8 +46,9 @@ body {
     color: black;
     background-color: white;
 }
+
 .grid-item:nth-child(odd) {
-    background-color:gray;
+    background-color:rgb(224, 224, 224);
 }
 
 .span-2 {
@@ -58,5 +58,5 @@ body {
 
 .span-3 {
     grid-column-end: span 2;
-    grid-row-end: span 4;
+    grid-row-end: span 3;
 }
