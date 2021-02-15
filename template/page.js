@@ -30,7 +30,6 @@ function mult_select(q, id) {
       color.style.textDecoration = 'none';
     }
     document.getElementById(id).setAttribute("value","no");
-    console.log('ok')
   }  
   else {
     color.style.color = '#e44178';
@@ -172,4 +171,21 @@ function change_next_color(nxt_d, nxt_l, id){
     document.getElementById(nxt_d).style.shadow = "#ff6b51"
     document.getElementById(nxt_l).setAttribute('for', 'pos' + id);
   }
+}
+function change_next_color_mult(nxt_d, nxt_l, id){
+  
+  for(i in temp_list){
+    if(temp_list[i].value == 'yes' && temp_list[i].q == (id-1)){
+      document.getElementById(nxt_d).style.backgroundColor = "#e44178";
+      document.getElementById(nxt_d).style.color = "#fff"
+      document.getElementById(nxt_d).style.shadow = "#ff6b51"
+      document.getElementById(nxt_l).setAttribute('for', 'pos' + id);
+      return
+    }
+  }
+  document.getElementById(nxt_d).style.backgroundColor = "#ffffff";
+  document.getElementById(nxt_d).style.color = "rgb(0, 0, 0)";
+  document.getElementById(nxt_d).style.shadow = "#ffc7bd"
+  document.getElementById(nxt_l).setAttribute('for', 'pos' + (id - 1));
+  
 }
