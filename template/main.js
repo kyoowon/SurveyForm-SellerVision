@@ -29,7 +29,7 @@ var app = http.createServer(function (request, response) {
       answer = [product];
 
       for (i in post.total) {
-        params_total.push(post.total[i])
+        answer.push(post.total[i])
       }
       var sql = "INSERT INTO survey_form (name, product, etc, email) VALUES (?,?,?,?)";
       dbconn.query(sql, params, function (error, rows) {
