@@ -189,3 +189,52 @@ function change_next_color_mult(nxt_d, nxt_l, id){
   document.getElementById(nxt_l).setAttribute('for', 'pos' + (id - 1));
   
 }
+
+
+//개인정보 동의 체크박스
+
+function allCheck() {
+  var chklist = document.getElementsByName("chk");
+  for(i in chklist)
+  chklist[i].setAttribute("checked", true);
+}// 모두 체크하기
+
+function oneCheck(a)
+{
+var allChkBox = $("[name=check1]");
+var chkBoxName = $(a).attr("name");
+
+
+if( $(a).prop("checked") )
+{
+  checkBoxLength = $("[name="+ chkBoxName +"]").length;
+   //전체체크박스 수(모두동의하기 체크박스 제외)
+  checkedLength = $("[name="+ chkBoxName +"]:checked").length;
+  //체크된 체크박스 수 
+  if( checkBoxLength == checkedLength ) {
+      allChkBox.prop("checked", true);
+      //전체체크박스수 == 체크된 체크박스 수 같다면 모두체크
+
+  } else {
+      allChkBox.prop("checked", false);
+      
+  }
+}
+else
+{
+  allChkBox.prop("checked", false);
+}
+}
+
+$(function(){
+$("[name=check1]").click(function(){
+  allCheck(this);
+  //모두동의하기 체크박스 클릭시
+});
+$("[name=check2]").each(function(){
+  $(this).click(function(){
+      oneCheck(this);
+  });
+});
+});
+

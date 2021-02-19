@@ -23,7 +23,7 @@ body
     height: 100%;
 }
 
-ul,li{
+ul, .li{
     list-style:none;
 }
 
@@ -35,12 +35,12 @@ ul,li{
     background-color:#fafafa;
 }
 
-.slide ul{
+.slide .ul{
     width:calc(1800vw * 18);
     display:flex;
 }
 
-.slide li{
+.slide .li{
     width:calc(1800vw / 18);
     height:100vh;
 }
@@ -174,24 +174,24 @@ ul,li{
 
 
 /* 슬라이드 조작 */
-#pos1:checked ~ ul{margin-left:0;}
-#pos2:checked ~ ul{margin-left:-100%;}
-#pos3:checked ~ ul{margin-left:-200%;}
-#pos4:checked ~ ul{margin-left:-300%;}
-#pos5:checked ~ ul{margin-left:-400%;}
-#pos6:checked ~ ul{margin-left:-500%;}
-#pos7:checked ~ ul{margin-left:-600%;}
-#pos8:checked ~ ul{margin-left:-700%;}
-#pos9:checked ~ ul{margin-left:-800%;}
-#pos10:checked ~ ul{margin-left:-900%;}
-#pos11:checked ~ ul{margin-left:-1000%;}
-#pos12:checked ~ ul{margin-left:-1100%;}
-#pos13:checked ~ ul{margin-left:-1200%;}
-#pos14:checked ~ ul{margin-left:-1300%;}
-#pos15:checked ~ ul{margin-left:-1400%;}
-#pos16:checked ~ ul{margin-left:-1500%;}
-#pos17:checked ~ ul{margin-left:-1600%;}
-#pos18:checked ~ ul{margin-left:-1700%;}
+#pos1:checked ~ .ul{margin-left:0;}
+#pos2:checked ~ .ul{margin-left:-1500%;}
+#pos3:checked ~ .ul{margin-left:-200%;}
+#pos4:checked ~ .ul{margin-left:-300%;}
+#pos5:checked ~ .ul{margin-left:-400%;}
+#pos6:checked ~ .ul{margin-left:-500%;}
+#pos7:checked ~ .ul{margin-left:-600%;}
+#pos8:checked ~ .ul{margin-left:-700%;}
+#pos9:checked ~ .ul{margin-left:-800%;}
+#pos10:checked ~ .ul{margin-left:-900%;}
+#pos11:checked ~ .ul{margin-left:-1000%;}
+#pos12:checked ~ .ul{margin-left:-1100%;}
+#pos13:checked ~ .ul{margin-left:-1200%;}
+#pos14:checked ~ .ul{margin-left:-1300%;}
+#pos15:checked ~ .ul{margin-left:-1400%;}
+#pos16:checked ~ .ul{margin-left:-1500%;}
+#pos17:checked ~ .ul{margin-left:-1600%;}
+#pos17:checked ~ .ul{margin-left:-1700%;}
 
 /* bullet 조작 */
 #pos1:checked ~ .bullet label:nth-child(1),
@@ -209,7 +209,8 @@ ul,li{
 #pos13:checked ~ .bullet label:nth-child(13),
 #pos14:checked ~ .bullet label:nth-child(14),
 #pos15:checked ~ .bullet label:nth-child(15),
-#pos16:checked ~ .bullet label:nth-child(16){background:#666;}
+#pos16:checked ~ .bullet label:nth-child(16),
+#pos17:checked ~ .bullet label:nth-child(17){background:#666;}
 
 
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
@@ -393,3 +394,22 @@ textarea:hover {
   font-size: 30px;
   display: inline;
 }
+
+.clearfix {
+  width: 90%;
+}
+.clearfix::after{content: "";display: block;clear: both;}
+
+#joinForm{width: 600px;margin: 2% auto; }
+#joinForm > input {padding: 0; width: 0; height: 0;}
+.join_box > ul{border: 1px solid #ddd;background-color: #fff;}
+.checkBox, .checkBox > ul{position: relative;}
+.checkBox > ul > li{float: left;}
+.checkBox > ul > li:first-child{width: 85%;padding: 15px;font-weight: 600;color: #888;}
+.checkBox > ul > li:nth-child(2){position: absolute;top: 50%;right: 30px;margin-top: -12px;}
+.checkBox textarea{width: 96%;height: 60px; margin: 0 2%;background-color: #f7f7f7;color: #888; border: none;}
+.footBtwrap{margin-top: 15px;}
+.footBtwrap > li{float: left;width: 50%;height: 60px;}
+.footBtwrap > li > button{display: block; width: 100%;height: 100%; font-size: 20px;text-align: center;line-height: 60px;}
+.fpmgBt1{background-color: #fff;color:#888}
+.fpmgBt2{background-color: lightsalmon;color: #fff}
