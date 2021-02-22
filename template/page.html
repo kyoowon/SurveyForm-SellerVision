@@ -402,7 +402,7 @@
           </div>
       </li>
       <li class="li">
-        <form action="" id="joinForm">
+        <div action="" id="joinForm">
           <ul class="join_box">
             <li class="checkBox check01">
               <ul class="clearfix">
@@ -419,7 +419,7 @@
               <ul class="clearfix">
                 <li>이용약관 동의(필수)</li>
                 <li class="checkBtn">
-                  <input style="padding: 0; width: 15px; height: 15px;" type="checkbox" name="chk" onclick="oneclick()">
+                  <input style="padding: 0; width: 15px; height: 15px;" type="checkbox" name="chk" onclick="oneCheck()">
                 </li>
               </ul>
               <textarea name="" id="">여러분을 환영합니다.
@@ -430,7 +430,7 @@
               <ul class="clearfix">
                 <li>개인정보 수집 및 이용에 대한 안내(필수)</li>
                 <li class="checkBtn">
-                  <input style="padding: 0; width: 15px; height: 15px;" type="checkbox" name="chk">
+                  <input style="padding: 0; width: 15px; height: 15px;" type="checkbox" name="chk" onclick="oneCheck()">
                 </li>
               </ul>
 
@@ -442,7 +442,7 @@
               <ul class="clearfix">
                 <li>위치정보 이용약관 동의(선택)</li>
                 <li class="checkBtn">
-                  <input style="padding: 0; width: 15px; height: 15px;" type="checkbox" name="chk">
+                  <input style="padding: 0; width: 15px; height: 15px;" type="checkbox" name="chk" onclick="oneCheck()">
                 </li>
               </ul>
               <textarea name="" id="">여러분을 환영합니다.
@@ -453,16 +453,16 @@
               <ul class="clearfix">
                 <li>이벤트 등 프로모션 알림 메일 수신(선택)</li>
                 <li class="checkBtn">
-                  <input style="padding: 0; width: 15px; height: 15px;" type="checkbox" name="chk">
+                  <input style="padding: 0; width: 15px; height: 15px;" type="checkbox" name="chk" onclick="oneCheck()">
                 </li>
               </ul>
             </li>
           </ul>
           <ul class="footBtwrap clearfix">
-            <li><button class="fpmgBt1">비동의</button></li>
-            <li><button class="fpmgBt2">동의</button></li>
+            <li><button class="fpmgBt1"><label for="pos15">이전</label></button></li>
+            <li><button class="fpmgBt2"><label id='q16 nl' style="cursor: pointer;" onclick="chkbox_Check(id)">동의</label></button></li>
           </ul>
-        </form>
+        <div>
       </li>
       <li class="li">
         <div class="container">
