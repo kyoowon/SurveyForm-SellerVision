@@ -94,4 +94,10 @@
     margin: 5% auto 0 ;
     /* border: solid 1px #b3aca7; */
   }
+  #joinForm {
+    width: 80%;
+  }
+  .clearfix{
+    width: 100%;
+  }
 }
