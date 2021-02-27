@@ -50,10 +50,12 @@ function click_select(q, id) {
   var idx = find_id(q);
   if (select_list.id != null) {
     document.getElementById(select_list.id).style.textDecoration = 'none';
-    if (q % 2 == 1)
+    if (q % 2 == 1){
       document.getElementById(select_list.id).style.color = '#181f39';
-    else
+    }
+    else{
       document.getElementById(select_list.id).style.color = '#fafafa';
+    }
   }
   if (total_list[idx] != null) {
     document.getElementById(total_list[idx].id).style.textDecoration = 'none';
@@ -177,7 +179,14 @@ function change_next_color_mult(nxt_d, nxt_l, id) {
 
 }
 
-
+// function chkCheck(n)
+// {
+//   var chklist = document.getElementsByName("chk"+n);
+//   var ans = document.getElementsByName("chk"+n+"_ans")
+//   for(i in ans){
+//     if(ans.)
+//   }
+// }
 //개인정보 동의 체크박스
 
 function allCheck() {

@@ -20,6 +20,7 @@
   .answer {
     margin-top: 10px;
     padding-left: 0px;
+    font-size: 23px;
     font-family: 'GmarketSansmid';
   }
   .select {
@@ -54,7 +55,7 @@
     font-family: 'GmarketSansmid';
   }
 
-  input {
+  .form input {
     font-size: 0.875em;
     width: 80%;
     height: 50px;
@@ -99,5 +100,8 @@
   }
   .clearfix{
     width: 100%;
+  }
+  .checkBox > ul > li{
+    margin: 0px -20px 3px 0px;
   }
 }
