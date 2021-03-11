@@ -54,6 +54,7 @@ function click_select(q, id) {
       document.getElementById(select_list.id).style.color = '#181f39';
     else
       document.getElementById(select_list.id).style.color = '#fafafa';
+    document.getElementById(select_list.id).
   }
   if (total_list[idx] != null) {
     document.getElementById(total_list[idx].id).style.textDecoration = 'none';
