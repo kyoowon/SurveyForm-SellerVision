@@ -24,7 +24,7 @@ module.exports = {
                     <!--기업 정보, 토탈 점수, 날짜-->
                     <div class="grid-info-layout">
                         <div class="gird-info" style="margin: auto 0;">회사명 : ${params[0]} <br> 상품명 : ${params[1]} <br> 이메일 : ${params[3]}</div>
-                        <div class="gird-info" style="margin: auto 0;">토탈 점수</div>
+                        <div class="gird-info" style="margin: auto 0;"></div>
                         <div class="gird-info" id="today" style="margin: auto 0;"> <script> var day = new Date(); document.getElementById("today").innerHTML =  "날짜 : " + day.getFullYear()+"/"+day.getMonth()+"/" + day.getDate() + "<br> 시간 : " +  day.getHours() + ":" + day.getMinutes() + ":" + day.getSeconds();</script> 
                         </div>
                 </div>

@@ -87,7 +87,7 @@ ul, .li{
 
 .inner {
     display: block;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .question {
@@ -100,13 +100,15 @@ ul, .li{
 .answer {
   display: inline;
   vertical-align: middle;
-  text-align: center;
+  /* text-align: center; */
   font-size: 30px;
   padding-left: 7px;
-  padding-right: 7x;
+  padding-right: 7px;
   font-family: 'GmarketSans';
 }
-
+.answer p{
+  margin-bottom: 15px
+}
 
 .answer label {
   justify-content: space-between;
@@ -118,13 +120,14 @@ ul, .li{
 }
 
 .select {
-  display: block;
+  /* display: block; */
   padding: 8px;
   font-size: 30px;
   margin-left: 5%;
   margin-right: 5%;
   text-align: left;
 }
+
 
 .select:hover {
   color:#e44178;
@@ -175,8 +178,8 @@ ul, .li{
 
 /* 슬라이드 조작 */
 #pos1:checked ~ .ul{margin-left:0;}
-#pos2:checked ~ .ul{margin-left:-1500%;}
-#pos3:checked ~ .ul{margin-left:-1600%;}
+#pos2:checked ~ .ul{margin-left:-100%;}
+#pos3:checked ~ .ul{margin-left:-200%;}
 #pos4:checked ~ .ul{margin-left:-300%;}
 #pos5:checked ~ .ul{margin-left:-400%;}
 #pos6:checked ~ .ul{margin-left:-500%;}
@@ -305,19 +308,20 @@ header {
   margin: 50px auto 100px auto;
 }
 
-input {
+input .textarea{
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
   width: 470px;
   height: 50px;
+
   padding: 0px 15px 0px 15px;
   
   background: transparent;
   background-color: #fff;
   outline: none;
-  /* color: #726659; */
+  color: #726659;
   color: rgb(0, 0, 0);
-  /* border: solid 1px #b3aca7; */
+  border: solid 1px #b3aca7; 
   border: solid 1px rgb(0, 0, 0);
   
   transition: all 0.3s ease-in-out;
@@ -417,7 +421,6 @@ textarea:hover {
 }
 .checkBox > ul > li{
   float: left;
-  margin: 0px -20px 3px 0px;
 }
 .checkBox > ul > li:first-child{
   width: 85%;
